@@ -1,0 +1,20 @@
+mixin list(items,liclass)
+    ul&attributes(attributes)
+        each item in items
+            - var linkatts = {'href': item.link,'class': item.class}
+            if (active == item.title)
+                li(class=[liclass, liclass + '--active'])
+                    a&attributes(linkatts)= item.title
+            else
+                li(class=liclass)
+                    a&attributes(linkatts)= item.title
+
+//- var active = 'Products'
+                
+//- .main-menu
+//-     +list([
+//-     {'title': 'Home', 'link': '#'},
+//-     {'title': 'Products', 'link': '#'},
+//-     {'title': 'Services', 'link': '#'},
+//-     {'title': 'Contact', 'link': '#'}
+//-     ], 'nav-list-item').nav-list
