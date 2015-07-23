@@ -8,18 +8,25 @@ doctype html
 html(lang="en")
 
     head
-        title
-            block title
-                | #{pageTitle}
         block meta
             meta(charset="utf-8")
             meta(http-equiv="X-UA-Compatible" content="IE=edge")
             meta(name="viewport" content="width=device-width, initial-scale=1.0")
             meta(name="description" content="Desctiption of #{thisPage.toLowerCase()} page")
+
+        title
+            block title
+                | #{pageTitle}
+
+        block favicon
+            if (favicon.showFavicon)
+                +favicon(favicon.path)
         block link
-            link(rel="icon" type="image/png" href="favicon.png" sizes="96x96")
             link(rel="stylesheet", href="css/style.css")
+
     body
+        block header
+            include header
         block index
         block svgsrite
             //svgsrite

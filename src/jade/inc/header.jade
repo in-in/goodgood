@@ -1,0 +1,29 @@
+mixin list(items,liclass)
+    ul&attributes(attributes)
+        each item in items
+            - var linkatts = {'href': item.link,'class': item.class}
+            if (active == item.title)
+                li(class=[liclass, liclass + '--active'])
+                    a&attributes(linkatts)= item.title
+            else
+                li(class=liclass)
+                    a&attributes(linkatts)= item.title
+
+header.header
+    .container
+        .header__logo
+            .logo
+                .logo__img
+                span.logo__text
+                    | Your Logo
+        .header__menu
+            nav(role='navigation').menu
+                +list([
+                {'title': 'Home', 'link': '#'},
+                {'title': 'Portfolio', 'link': '#'},
+                {'title': 'About', 'link': '#'},
+                {'title': 'Contact', 'link': '#'}
+                ], 'menu__list__item').menu__list
+        .header__search
+            .search
+                | search

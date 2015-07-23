@@ -11,6 +11,7 @@ module.exports = function (grunt) {
             //'node_modules/normalize.css/',
             //'node_modules/flexboxgrid/dist/',
             //'node_modules/slick-carousel/slick',
+            'node_modules/susy/sass',
             'node_modules/breakpoint-sass/stylesheets',
             'src/scss/',
             'src/scss/base/',
@@ -18,7 +19,8 @@ module.exports = function (grunt) {
             'src/scss/module/',
             'src/scss/utils/'
           ],
-          outputStyle: 'nested'
+          outputStyle: 'expanded',
+          sourceMap: true
         },
         files: {
           "src/css/style.css": "src/scss/index.scss"
@@ -26,14 +28,15 @@ module.exports = function (grunt) {
       }
     },
 
-    autoprefixer: {
-      dev: {
-        options: {
-          browsers: ['last 1 version']
-        },
-        files: [{
-          src: 'src/css/style.css'
-        }]
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer-core')({browsers: 'last 2 versions'})
+        ]
+      },
+      dist: {
+        src: 'src/css/style.css'
       }
     },
 
@@ -171,7 +174,7 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: "src/scss/**/*.scss",
-        tasks: ['sass:dev', 'autoprefixer']
+        tasks: ['sass:dev', 'postcss']
       },
       jade: {
         files: "src/jade/**/*.jade",

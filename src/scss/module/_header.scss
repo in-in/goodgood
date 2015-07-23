@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  background-color: palegreen;
+  @include layout($header float inside);
+}
+
+.header__logo {
+  @include span(1 of 3);
+
+}
+
+.header__menu {
+  @include span(1 of 3);
+}
+
+.header__search {
+  @include span(1 of 3);
+}
