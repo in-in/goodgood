@@ -1,11 +1,20 @@
 $browser-context: 16;
-
-$header: (
-  columns: 12,
+$susy: (
+  columns: 10,
   gutters: 0,
+  container: 60em,
   math: fluid,
   output: float,
   gutter-position: inside,
+  debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: overlay,
+    toggle: top right,
+  ),
 );
 
-//$shorthand: 12 1/4 fluid float inside;
+//color
+$orange: #f98561;
+$neal: #23afc8;
+$main-text-color: #515862;

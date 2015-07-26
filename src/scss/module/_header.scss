@@ -1,12 +1,13 @@
 .header {
   width: 100%;
+  height: rem(80);
+
   background-color: palegreen;
-  @include layout($header float inside);
+  box-shadow: inset 0 -1px 0 #d7d9da;
 }
 
 .header__logo {
   @include span(1 of 3);
-
 }
 
 .header__menu {
@@ -14,5 +15,19 @@
 }
 
 .header__search {
-  @include span(1 of 3);
+  @include span(1 of 3 last);
+}
+
+
+.header__logo,
+.header__menu,
+.header__search {
+  height: inherit;
+
+  outline: 1px dotted black;
+}
+
+
+.menu__list__item {
+  list-style-type: none;
 }

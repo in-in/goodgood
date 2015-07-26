@@ -1,0 +1,45 @@
+.logo {
+  background-color: #fff;
+
+  @include vert-center;
+}
+
+.logo__img {
+  display: inline-block;
+
+  height: rem(20);
+  margin-right: rem(7);
+
+  transform: translateY(-.1em);
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    display: inline-block;
+
+    width: rem(20);
+    height: inherit;
+
+    content: '';
+  }
+
+  &::before {
+    margin-right: rem(3);
+
+    border-radius: 50%;
+    background-color: $orange;
+  }
+
+  &::after {
+    background-color: $neal;
+  }
+}
+
+.logo__text {
+  color: #606060;
+
+  font-size: rem(20);
+  line-height: 1.5;
+
+  @include font(breeserif);
+}

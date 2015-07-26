@@ -261,6 +261,13 @@ module.exports = function (grunt) {
       }
     },
 
+    notify_hooks: {
+      options: {
+        enabled: true,
+        duration: 10
+      }
+    },
+
 //PUBLISH ON GITHUB PAGES
 
     'gh-pages': {

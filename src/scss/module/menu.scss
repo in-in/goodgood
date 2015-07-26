@@ -1,0 +1,13 @@
+.menu {
+  @include vert-center;
+}
+
+.menu__list__item {
+  a {
+    color: $main-text-color;
+
+    font-size: rem(14);
+
+    @include font(ubuntu);
+  }
+}

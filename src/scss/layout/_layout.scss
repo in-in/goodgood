@@ -1,4 +1,7 @@
 .container {
-  @include container(58.750em);
+  height: 100%;
+
   outline: 1px dotted red;
+
+  @include container();
 }
