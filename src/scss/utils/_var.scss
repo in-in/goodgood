@@ -1,20 +1,7 @@
 $browser-context: 16;
-$susy: (
-  columns: 10,
-  gutters: 0,
-  container: 60em,
-  math: fluid,
-  output: float,
-  gutter-position: inside,
-  debug: (
-    image: show,
-    color: rgba(#66f, .25),
-    output: overlay,
-    toggle: top right,
-  ),
-);
 
-//color
+// COLOR
 $orange: #f98561;
 $neal: #23afc8;
+$blue: #12a3d6;
 $main-text-color: #515862;

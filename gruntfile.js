@@ -8,9 +8,6 @@ module.exports = function (grunt) {
       dev: {
         options: {
           includePaths: [
-            //'node_modules/normalize.css/',
-            //'node_modules/flexboxgrid/dist/',
-            //'node_modules/slick-carousel/slick',
             'node_modules/susy/sass',
             'node_modules/breakpoint-sass/stylesheets',
             'src/scss/',
@@ -61,9 +58,6 @@ module.exports = function (grunt) {
           separator: ';\n'
         },
         src: [
-          //'node_modules/jquery/dist/jquery.js',
-          //'node_modules/slick-carousel/slick/slick.js',
-          //'node_modules/isotope-layout/dist/isotope.pkgd.js',
           'src/js/dev/*.js'
         ],
         dest: 'src/js/main.js'

@@ -1,0 +1,45 @@
+.search {
+  @include vert-center;
+}
+
+.search input {
+  box-sizing: border-box;
+  width: calc(100% - 36px);
+  padding: 0;
+  padding-right: .5rem;
+  padding-left: .5rem;
+
+  color: $main-text-color;
+  border: none;
+  outline: none;
+  background-color: inherit;
+
+  font-size: rem(12);
+  line-height: 36px;
+
+  @include font(ubuntu);
+
+  &::placeholder {
+    text-align: right;
+
+    color: $main-text-color;
+
+    font-size: rem(12);
+
+    @include font(ubuntu);
+  }
+
+  &:focus {
+    box-shadow: 0 1px 0 $blue;
+  }
+}
+
+.search__icon {
+  float: right;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  background-color: $orange;
+}

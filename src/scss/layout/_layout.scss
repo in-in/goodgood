@@ -1,5 +1,26 @@
+// SUSY CONFIG
+$susy: (
+  columns: 12,
+  gutters: 0,
+  container: 60em,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: overlay,
+    toggle: top right,
+  ),
+);
+
+//$nav_susy: layout(10 0 float inside);
+
+
 .container {
   height: 100%;
+  padding-right: rem(10);
+  padding-left: rem(10);
 
   outline: 1px dotted red;
 

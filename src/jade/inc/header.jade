@@ -2,8 +2,8 @@ mixin list(items,liclass)
     ul&attributes(attributes)
         each item in items
             - var linkatts = {'href': item.link,'class': item.class}
-            if (active == item.title)
-                li(class=[liclass, liclass + '--active'])
+            if (thisPage == item.title)
+                li(class=[liclass, liclass + '--active', 'caret'])
                     a&attributes(linkatts)= item.title
             else
                 li(class=liclass)
@@ -26,4 +26,5 @@ header.header
                 ], 'menu__list__item').menu__list
         .header__search
             .search
-                | search
+                input(type='search' placeholder='Search')
+                .search__icon
