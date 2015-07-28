@@ -7,9 +7,9 @@ $susy: (
   output: float,
   gutter-position: inside,
   debug: (
-    image: show,
+    image: false,
     color: rgba(#66f, .25),
-    output: overlay,
+    output: background,
     toggle: top right,
   ),
 );

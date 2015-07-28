@@ -26,5 +26,8 @@ header.header
                 ], 'menu__list__item').menu__list
         .header__search
             .search
-                input(type='search' placeholder='Search')
-                .search__icon
+                form#search-form
+                    input(type='search' placeholder='Search')
+                    //.search__icon
+                        svg.icon
+                            use(xlink:href="#icon-search")

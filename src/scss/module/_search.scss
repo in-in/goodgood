@@ -3,24 +3,32 @@
 }
 
 .search input {
-  box-sizing: border-box;
-  width: calc(100% - 36px);
+  box-sizing: content-box;
+  width: 2.5rem;
   padding: 0;
-  padding-right: .5rem;
-  padding-left: .5rem;
+  padding-right: rem(40);
+  padding-left: rem(10);
+
+  transition: all .5s;
 
   color: $main-text-color;
   border: none;
+  border-radius: 10em;
   outline: none;
   background-color: inherit;
+  background-image: url(../img/icon-search.png);
+  background-repeat: no-repeat;
+  background-position: right 0;
 
   font-size: rem(12);
-  line-height: 36px;
+  line-height: rem(36);
 
+  -webkit-appearance: textfield;
+  @include font(ubuntu);
   @include font(ubuntu);
 
   &::placeholder {
-    text-align: right;
+    text-align: left;
 
     color: $main-text-color;
 
@@ -30,8 +38,17 @@
   }
 
   &:focus {
-    box-shadow: 0 1px 0 $blue;
+    width: calc(100% - 40px);
+
+    border-color: $blue;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(18,163,214,.5);
   }
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
 }
 
 .search__icon {
