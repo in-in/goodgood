@@ -3,18 +3,52 @@
   height: rem(80);
 
   box-shadow: inset 0 -1px 0 #d7d9da;
+
+  @include breakpoint($medium) {
+    height: rem(60);
+  }
 }
 
 .header__logo {
+
   @include span(4);
+
+  @include breakpoint($medium) {
+    @include span(3);
+  }
+
+  @include breakpoint($small) {
+    @include span(2);
+  }
 }
 
 .header__menu {
   @include span(6);
+
+
+  @include breakpoint($medium) {
+    @include span(6);
+  }
+
+  @include breakpoint($small) {
+    @include span(10);
+  }
+
 }
 
 .header__search {
+
   @include span(2 last);
+
+  @include breakpoint($medium) {
+    @include span(3 last);
+  }
+
+  @include breakpoint($small) {
+    text-align: center;
+
+    @include span(12 last);
+  }
 }
 
 

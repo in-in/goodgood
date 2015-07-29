@@ -131,24 +131,24 @@ module.exports = function (grunt) {
 
 //CSSCOMB
 
-    csscomb: {
-      dev: {
-        options: {
-          config: '.csscomb.json'
-        },
-        files: [{
-          expand: true,
-          cwd: 'src/scss',
-          src: ['**/*.scss',
-                '!**/_utils.scss',
-                '!**/_vars.scss',
-                '!**/_module.scss'
-               ],
-          dest: 'src/scss/',
-          ext: '.scss'
-        }]
-      }
-    },
+    //csscomb: {
+    //  dev: {
+    //    options: {
+    //      config: '.csscomb.json'
+    //    },
+    //    files: [{
+    //      expand: true,
+    //      cwd: 'src/scss',
+    //      src: ['**/*.scss',
+    //            '!**/_utils.scss',
+    //            '!**/_vars.scss',
+    //            '!**/_module.scss'
+    //           ],
+    //      dest: 'src/scss/',
+    //      ext: '.scss'
+    //    }]
+    //  }
+    //},
 
 //UNCSS
 
@@ -273,7 +273,7 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('comb', ['newer:csscomb']);
+  //grunt.registerTask('comb', ['newer:csscomb']);
   
   grunt.registerTask('svg', [
     'clean:svg',
@@ -282,7 +282,6 @@ module.exports = function (grunt) {
   ]);
   
   grunt.registerTask('build', [
-    'comb',
     'clean:build',
     'copy',
     'cssmin',

@@ -1,4 +1,6 @@
 .search {
+  text-align: right;
+
   @include vert-center;
 }
 
@@ -24,6 +26,16 @@
   line-height: rem(36);
 
   -webkit-appearance: textfield;
+  @include breakpoint($small) {
+    box-sizing: border-box;
+    width: calc(100% - 5%);
+    padding-right: rem(10);
+
+    border: 1px solid #ccc;
+    background-image: none;
+
+    line-height: 200%;
+  }
   @include font(ubuntu);
   @include font(ubuntu);
 
@@ -38,11 +50,17 @@
   }
 
   &:focus {
-    width: calc(100% - 40px);
+    width: calc(100% - 3.125rem);
 
-    border-color: $blue;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(18,163,214,.5);
+
+    @include breakpoint($small) {
+      width: calc(100% - 5%);
+
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(18,163,214,.5);
+    }
   }
 }
 

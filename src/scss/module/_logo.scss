@@ -11,6 +11,22 @@
   transform: translateY(-.1em);
   vertical-align: middle;
 
+  @include breakpoint($small) {
+    display: inline-block;
+
+    margin-left: .3rem;
+
+    &::before,
+    &::after {
+      width: rem(20);
+    }
+  }
+  @include breakpoint($medium) {
+    display: block;
+
+    text-align: center;
+  }
+
   &::before,
   &::after {
     display: inline-block;
@@ -38,6 +54,17 @@
 
   font-size: rem(20);
   line-height: 1.5;
+
+  @include breakpoint($medium) {
+    display: block;
+    line-height: 1;
+
+    text-align: center;
+  }
+
+  @include breakpoint($small) {
+    display: none;
+  }
 
   @include font(breeserif);
 }
