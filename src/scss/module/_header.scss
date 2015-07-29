@@ -7,6 +7,20 @@
   @include breakpoint($medium) {
     height: rem(60);
   }
+
+  @include breakpoint($small) {
+    height: rem(120);
+  }
+}
+
+.header__logo,
+.header__menu,
+.header__search {
+  height: inherit;
+
+  @include breakpoint($small) {
+    height: rem(60);
+  }
 }
 
 .header__logo {
@@ -31,9 +45,8 @@
   }
 
   @include breakpoint($small) {
-    @include span(10);
+    @include span(10 last);
   }
-
 }
 
 .header__search {
@@ -45,20 +58,6 @@
   }
 
   @include breakpoint($small) {
-    text-align: center;
-
     @include span(12 last);
   }
-}
-
-
-.header__logo,
-.header__menu,
-.header__search {
-  height: inherit;
-}
-
-
-.menu__list__item {
-  list-style-type: none;
 }

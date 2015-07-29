@@ -2,6 +2,10 @@
   text-align: right;
 
   @include vert-center;
+
+  @include breakpoint($small) {
+    text-align: center;
+  }
 }
 
 .search input {
@@ -26,13 +30,14 @@
   line-height: rem(36);
 
   -webkit-appearance: textfield;
+
   @include breakpoint($small) {
     box-sizing: border-box;
     width: calc(100% - 5%);
     padding-right: rem(10);
 
     border: 1px solid #ccc;
-    background-image: none;
+    background-size: contain;
 
     line-height: 200%;
   }
@@ -69,12 +74,12 @@ input::-webkit-search-cancel-button {
   display: none;
 }
 
-.search__icon {
-  float: right;
-
-  width: 36px;
-  height: 36px;
-
-  border-radius: 50%;
-  background-color: $orange;
-}
+//.search__icon {
+//  float: right;
+//
+//  width: 36px;
+//  height: 36px;
+//
+//  border-radius: 50%;
+//  background-color: $orange;
+//}

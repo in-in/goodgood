@@ -11,20 +11,14 @@
   transform: translateY(-.1em);
   vertical-align: middle;
 
-  @include breakpoint($small) {
-    display: inline-block;
-
-    margin-left: .3rem;
-
-    &::before,
-    &::after {
-      width: rem(20);
-    }
-  }
   @include breakpoint($medium) {
     display: block;
 
     text-align: center;
+  }
+
+  @include breakpoint($small) {
+    display: inline-block;
   }
 
   &::before,
