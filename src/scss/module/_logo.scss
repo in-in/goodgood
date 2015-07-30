@@ -13,12 +13,6 @@
 
   @include breakpoint($medium) {
     display: block;
-
-    text-align: center;
-  }
-
-  @include breakpoint($small) {
-    display: inline-block;
   }
 
   &::before,
@@ -48,17 +42,14 @@
 
   font-size: rem(20);
   line-height: 1.5;
+  @include font(breeserif);
 
   @include breakpoint($medium) {
     display: block;
     line-height: 1;
-
-    text-align: center;
   }
 
   @include breakpoint($small) {
     display: none;
   }
-
-  @include font(breeserif);
 }

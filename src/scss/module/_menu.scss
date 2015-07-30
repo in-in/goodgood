@@ -1,32 +1,18 @@
-.menu {
-  height: inherit;
-}
-
+.menu,
 .menu__list {
   height: inherit;
 }
 
 .menu__list__item {
-  display: inline-block;
-
+  @include span(2.5 of $nav_susy);
   height: 100%;
-  margin-right: -5px;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
 
   list-style-type: none;
   text-align: center;
   transition: all .2s ease;
 
   @include breakpoint($medium) {
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-
-  @include breakpoint($small) {
-    border-radius: 5rem;
-    display: block;
-    @include span(3)
+    @include span(3 of $nav_susy);
   }
 
   &:hover {
@@ -37,16 +23,12 @@
       background-color: unset;
       box-shadow: none;
     }
-    a {
-      color: rgba(255, 255, 255, .8);
-      text-shadow: 0 0 1px rgba(255, 255, 255, .8);
 
-      @include breakpoint($small) {
-        display: block;
-        background-color: $blue;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        border-radius: 10em;
+    a {
+
+      @include breakpoint(min-width 40em) {
+        color: rgba(255, 255, 255, .8);
+        font-weight: 700;
       }
     }
   }
@@ -61,6 +43,17 @@
 
   @include vert-center;
   @include font(ubuntu);
+
+  &:hover {
+    @include breakpoint($small) {
+      background-color: $blue;
+      border-radius: 1rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      color: rgba(255, 255, 255, .8);
+      font-weight: 700;
+    }
+  }
 }
 
 .menu__list__item--active {
@@ -78,18 +71,10 @@
     @include font(ubuntu, bold);
 
     @include breakpoint($small) {
-      display: block;
       background-color: $blue;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      border-radius: 1em;
-    }
-  }
-
-  &:hover {
-    
-    a {
-      text-shadow: none;
+      border-radius: 1rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
     }
   }
 }
@@ -98,6 +83,7 @@
   position: relative;
 
   -moz-transform: scale(.9999);
+
 }
 
 .caret:before {
@@ -110,6 +96,10 @@
   border-right: rem(6) solid transparent;
   border-bottom: rem(6) solid darken($blue, 9%);
   border-left: rem(6) solid transparent;
+
+  @include breakpoint($small) {
+    display: none;
+  }
 }
 
 .caret:after {

@@ -39,11 +39,6 @@
 .header__menu {
   @include span(6);
 
-
-  @include breakpoint($medium) {
-    @include span(6);
-  }
-
   @include breakpoint($small) {
     @include span(10 last);
   }

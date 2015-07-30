@@ -30,10 +30,11 @@
   line-height: rem(36);
 
   -webkit-appearance: textfield;
+  @include font(ubuntu);
 
   @include breakpoint($small) {
     box-sizing: border-box;
-    width: calc(100% - 5%);
+    width: 95%;
     padding-right: rem(10);
 
     border: 1px solid #ccc;
@@ -41,8 +42,6 @@
 
     line-height: 200%;
   }
-  @include font(ubuntu);
-  @include font(ubuntu);
 
   &::placeholder {
     text-align: left;
@@ -61,10 +60,7 @@
     box-shadow: 0 0 5px rgba(18,163,214,.5);
 
     @include breakpoint($small) {
-      width: calc(100% - 5%);
-
-      background-color: #fff;
-      box-shadow: 0 0 5px rgba(18,163,214,.5);
+      width: 95%;
     }
   }
 }
@@ -73,13 +69,3 @@ input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
   display: none;
 }
-
-//.search__icon {
-//  float: right;
-//
-//  width: 36px;
-//  height: 36px;
-//
-//  border-radius: 50%;
-//  background-color: $orange;
-//}
