@@ -1,0 +1,47 @@
+mixin slider(items)
+    each item in items
+        - var atts = {'src': item.img, 'alt': 'image'}
+        .slider--item
+            .slider--img
+                img&attributes(atts)
+            .container
+                .slider--content
+                    h1.slider--title= item.title
+                    p.slider--text= item.text
+                    a(href=item.link).slider--btn
+                        | Learn More
+
+
+.slider
+    +slider([
+        {
+            'title': 'Good Design Is Good Business',
+            'img': 'img/slider-img1.jpg',
+            'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.',
+            'link': '#'
+        },
+        {
+            'title': 'Good Design Is Good Business',
+            'img': 'img/slider-img2.jpg',
+            'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.',
+            'link': '#'
+        },
+        {
+            'title': 'Good Design Is Good Business',
+            'img': 'img/slider-img3.jpg',
+            'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.',
+            'link': '#'
+        },
+        {
+            'title': 'Good Design Is Good Business',
+            'img': 'img/slider-img4.jpg',
+            'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.',
+            'link': '#'
+        },
+        {
+            'title': 'Good Design Is Good Business',
+            'img': 'img/slider-img5.jpg',
+            'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.',
+            'link': '#'
+        }
+    ])

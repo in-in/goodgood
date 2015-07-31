@@ -10,6 +10,7 @@ module.exports = function (grunt) {
           includePaths: [
             'node_modules/susy/sass',
             'node_modules/breakpoint-sass/stylesheets',
+            'node_modules/flickity/dist',
             'src/scss/',
             'src/scss/base/',
             'src/scss/layout/',
@@ -58,6 +59,7 @@ module.exports = function (grunt) {
           separator: ';\n'
         },
         src: [
+          'node_modules/flickity/dist/flickity.pkgd.js',
           'src/js/dev/*.js'
         ],
         dest: 'src/js/main.js'
@@ -128,27 +130,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
-//CSSCOMB
-
-    //csscomb: {
-    //  dev: {
-    //    options: {
-    //      config: '.csscomb.json'
-    //    },
-    //    files: [{
-    //      expand: true,
-    //      cwd: 'src/scss',
-    //      src: ['**/*.scss',
-    //            '!**/_utils.scss',
-    //            '!**/_vars.scss',
-    //            '!**/_module.scss'
-    //           ],
-    //      dest: 'src/scss/',
-    //      ext: '.scss'
-    //    }]
-    //  }
-    //},
 
 //UNCSS
 

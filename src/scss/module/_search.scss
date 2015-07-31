@@ -21,13 +21,14 @@
   border: none;
   border-radius: 10em;
   outline: none;
-  background-color: inherit;
+  background-color: #f4f4f4;
   background-image: url(../img/icon-search.png);
   background-repeat: no-repeat;
   background-position: right 0;
 
   font-size: rem(12);
   line-height: rem(36);
+  height: rem(36);
 
   -webkit-appearance: textfield;
   @include font(ubuntu);
@@ -39,8 +40,8 @@
 
     border: 1px solid #ccc;
     background-size: contain;
-
-    line-height: 200%;
+    height: rem(24);
+    line-height: 100%;
   }
 
   &::placeholder {
