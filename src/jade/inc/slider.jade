@@ -1,15 +1,16 @@
 mixin slider(items)
     each item in items
-        - var atts = {'src': item.img, 'alt': 'image'}
-        .slider--item
-            .slider--img
+        - var atts = {'src': 'http://lorempixel.com/1280/490/abstract/9/','data-flickity-lazyload': item.img,'alt': 'image'}
+        .slider--item.slide
+            .slide--img
                 img&attributes(atts)
             .container
-                .slider--content
-                    h1.slider--title= item.title
-                    p.slider--text= item.text
-                    a(href=item.link).slider--btn
-                        | Learn More
+                .slide--inner
+                    .slide--content
+                        h1.slide--title= item.title
+                        p.slide--text= item.text
+                        a(href=item.link).slide--btn
+                            | Learn More
 
 
 .slider

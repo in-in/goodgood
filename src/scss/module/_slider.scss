@@ -1,29 +1,37 @@
 .slider {
   background-color: orange;
-  height: rem(491);
+  height: rem(490);
 }
 
 .slider--item {
-  position: relative;
+
 }
 
-.slider--img img{
+.slide {
+  width: 1280px;
+}
+
+.slide--img img{
   display: block;
   max-width: 100%;
+  min-height: rem(490);
   margin: 0 auto;
 }
 
-.slider--content {
-  //position: absolute;
-  //top: 0;
-  //left: 0;
-  outline: 1px dotted green;
-  //@include span(8);
-  //@include pre(2);
-
+.slide--inner {
+  position: relative;
 }
 
-.slider--title {
+.slide--content {
+  position: absolute;
+  bottom: 11rem;
+  left: 0;
+  @include span(8);
+  @include pre(2);
+}
+
+.slide--title {
+  margin-bottom: rem(25);
   @include font(oswald, bold);
   text-transform: uppercase;
   text-align: center;
@@ -31,14 +39,15 @@
   color: $slider-text-color;
 }
 
-.slider--text {
+.slide--text {
+  margin-bottom: rem(46);
   @include font(ubuntu);
   font-size: rem(14);
   color: $slider-text-color;
   text-align: center;
 }
 
-.slider--btn {
+.slide--btn {
   display: block;
   width: rem(243);
   height: rem(51);
@@ -52,3 +61,21 @@
   background-color: $orange;
   border-radius: rem(4);
 }
+
+.flickity-page-dots {
+  bottom: 0;
+  left: 37%;
+}
+
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+

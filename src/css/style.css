@@ -629,24 +629,36 @@ input::-webkit-search-cancel-button {
 
 .slider {
   background-color: orange;
-  height: 30.6875rem;
+  height: 30.625rem;
 }
 
-.slider--item {
-  position: relative;
+.slide {
+  width: 1280px;
 }
 
-.slider--img img {
+.slide--img img {
   display: block;
   max-width: 100%;
+  min-height: 30.625rem;
   margin: 0 auto;
 }
 
-.slider--content {
-  outline: 1px dotted green;
+.slide--inner {
+  position: relative;
 }
 
-.slider--title {
+.slide--content {
+  position: absolute;
+  bottom: 11rem;
+  left: 0;
+  box-sizing: border-box;
+  width: 66.6666666667%;
+  float: left;
+  margin-left: 16.6666666667%;
+}
+
+.slide--title {
+  margin-bottom: 1.5625rem;
   font-family: "Oswald", san-serif;
   font-weight: 700;
   font-style: normal;
@@ -656,7 +668,8 @@ input::-webkit-search-cancel-button {
   color: #cccece;
 }
 
-.slider--text {
+.slide--text {
+  margin-bottom: 2.875rem;
   font-family: "Ubuntu", san-serif;
   font-weight: 400;
   font-style: normal;
@@ -665,7 +678,7 @@ input::-webkit-search-cancel-button {
   text-align: center;
 }
 
-.slider--btn {
+.slide--btn {
   display: block;
   width: 15.1875rem;
   height: 3.1875rem;
@@ -680,5 +693,22 @@ input::-webkit-search-cancel-button {
   color: rgba(255, 255, 255, 0.8);
   background-color: #f98561;
   border-radius: 0.25rem;
+}
+
+.flickity-page-dots {
+  bottom: 0;
+  left: 37%;
+}
+
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
 }
 /*# sourceMappingURL=style.css.map */
