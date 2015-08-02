@@ -5273,5 +5273,6 @@ var flkty = new Flickity( elem, {
   cellAlign: 'center',
   contain: true,
   prevNextButtons: false,
-  lazyLoad: true
+  lazyLoad: true,
+  initialIndex: 3
 });

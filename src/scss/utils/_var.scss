@@ -3,11 +3,12 @@ $browser-context: 16;
 // COLOR
 $orange: #f98561;
 $neal: #23afc8;
-$blue: #12a3d6;
+$main-blue: #2190c1;
+$second-blue: #12a3d6;
 $main-text-color: #515862;
 $slider-text-color: #cccece;
 
 //BREAKPOINTS
-$small: max-width 40em;
-$medium: max-width 50em;
-$large: max-width 60em;
+$small: max-width 40em; //640px
+$medium: max-width 50em; //800px
+$large: max-width 60em; //960px
