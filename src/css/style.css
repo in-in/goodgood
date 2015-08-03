@@ -776,4 +776,58 @@ input::-webkit-search-cancel-button {
     border-width: 2px;
   }
 }
+
+.card {
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  outline: 1px dotted black;
+}
+
+.card--icon {
+  width: 7.375rem;
+  height: 7.375rem;
+  margin: 0 auto;
+  background-image: url(../img/services_img.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.card:nth-child(2) .card--icon {
+  background-position: -118px 0;
+}
+
+.card:nth-child(3) .card--icon {
+  background-position: -236px 0;
+}
+
+.card:nth-child(4) .card--icon {
+  background-position: -354px 0;
+}
+
+.card--title {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.0625rem;
+  color: #515862;
+  text-align: center;
+}
+
+.card--text {
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.6875rem;
+  color: #515862;
+  line-height: 0.9375rem;
+  text-align: center;
+}
+
+.card--details a {
+  color: #3e9dd1;
+  font-family: "Ubuntu", san-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 /*# sourceMappingURL=style.css.map */

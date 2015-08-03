@@ -1,0 +1,45 @@
+.card {
+  @include span (3);
+  outline: 1px dotted black;
+}
+
+.card--icon {
+  width: rem(118);
+  height: rem(118);
+  margin: 0 auto;
+  background-image: url(../img/services_img.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.card:nth-child(2) .card--icon{
+  background-position: -118px 0;
+}
+
+.card:nth-child(3) .card--icon{
+  background-position: -236px 0;
+}
+
+.card:nth-child(4) .card--icon{
+  background-position: -354px 0;
+}
+
+.card--title {
+  @include font(breeserif);
+  font-size: rem(17);
+  color: $main-text-color;
+  text-align: center;
+}
+
+.card--text {
+  @include font(ubuntu);
+  font-size: rem(11);
+  color: $main-text-color;
+  line-height: rem(15);
+  text-align: center;
+}
+
+.card--details a {
+  color: $details-link;
+  @include font(ubuntu, bold);
+}
