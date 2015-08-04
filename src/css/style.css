@@ -939,6 +939,118 @@ input::-webkit-search-cancel-button {
 
 .portolio {
   background-color: #2e3e4f;
-  height: 518px;
+  height: 555px;
+}
+
+.portolio--title {
+  box-sizing: border-box;
+  float: left;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f98561;
+  font-size: 1.875rem;
+}
+
+.portolio--more-link {
+  box-sizing: border-box;
+  float: right;
+}
+
+.portolio--more-link a {
+  font-family: "Oswald", san-serif;
+  font-weight: 700;
+  font-style: normal;
+  height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2190c1;
+  border-radius: 3px;
+  line-height: 2rem;
+}
+
+.gallery {
+  clear: both;
+}
+
+.gallery-card {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.3333333333%;
+  float: left;
+  margin-right: 5.2083333333%;
+  width: 17.5rem;
+  outline: 1px dotted white;
+}
+
+.gallery-card:last-child {
+  margin-right: 0%;
+}
+
+.gallery-card--pic {
+  position: relative;
+  text-align: center;
+  transition: all 0.8s ease;
+}
+
+.gallery-card--pic img {
+  display: block;
+  border: 0.625rem solid #fff;
+}
+
+.gallery-card--pic:hover .gallery-card--details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 62, 79, 0.6);
+  transition: all 0.2s ease;
+}
+
+.gallery-card--pic:hover .gallery-card--details::after {
+  display: block;
+  content: 'Details';
+  box-sizing: border-box;
+  width: 30%;
+  height: 2.625rem;
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.0625rem;
+  color: #f4f4f4;
+  line-height: 2.625rem;
+  border: 1px solid #f8f8f8;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.gallery-card--title {
+  margin-bottom: 0.625rem;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.0625rem;
+  color: #f98561;
+  text-align: left;
+}
+
+.gallery-card--text {
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.6875rem;
+  color: #bcbcbc;
+  line-height: 0.9375rem;
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */
