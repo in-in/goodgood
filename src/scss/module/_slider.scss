@@ -1,6 +1,10 @@
+.top-slider {
+  background-color: $dark-blue-bg;
+}
+
 .slider {
   max-width: 1280px;
-  height: rem(490);
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -13,6 +17,14 @@
   max-width: 100%;
   min-height: rem(490);
   margin: 0 auto;
+
+  @include breakpoint($medium) {
+    min-height: rem(306);
+  }
+
+  @include breakpoint($small) {
+    min-height: rem(245);
+  }
 }
 
 .slide--inner {
@@ -31,12 +43,12 @@
   @include breakpoint($medium) {
     @include span(9);
     @include pre(1.5);
+    margin-bottom: 7%;
   }
 
   @include breakpoint($small) {
     @include span(10);
     @include pre(1);
-    margin-bottom: 30%;
   }
 }
 
@@ -49,11 +61,11 @@
   color: $slider-text-color;
 
   @include breakpoint($medium) {
-    font-size: rem(42);
+    font-size: rem(41);
   }
 
   @include breakpoint($small) {
-    font-size: rem(40);
+    font-size: rem(34);
   }
 }
 
@@ -64,6 +76,15 @@
   text-align: center;
   line-height: 1.3;
   color: $slider-text-color;
+
+  @include breakpoint($medium) {
+    margin-bottom: rem(35);
+    font-size: rem(13);
+  }
+
+  @include breakpoint($small) {
+    margin-bottom: rem(30);
+  }
 }
 
 .slide--btn {
@@ -80,11 +101,18 @@
   background-color: $orange;
   border-radius: rem(4);
 
+@include breakpoint($medium) {
+  width: rem(200);
+  height: rem(45);
+  font-size: rem(20);
+  line-height: rem(45);
+}
+
   @include breakpoint($small) {
-    width: rem(200);
-    height: rem(45);
-    font-size: rem(20);
-    line-height: rem(45);
+    width: rem(150);
+    height: rem(40);
+    font-size: rem(18);
+    line-height: rem(40);
   }
 }
 

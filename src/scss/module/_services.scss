@@ -1,34 +1,80 @@
+.services--title {
+  position: relative;
+  width: rem(144);
+  height: rem(35);
+  margin-top: rem(-15);
+  margin-bottom: rem(30);
+  margin-left: auto;
+  margin-right: auto;
+  @include font(oswald, bold);
+  text-transform: uppercase;
+  font-size: rem(15);
+  text-align: center;
+  color: #fff;
+  line-height: rem(35);
+  background-color: $main-blue;
+  border-radius: 4px;
+  z-index: 3;
+}
+
 .card {
   @include span (3);
-  outline: 1px dotted black;
+  @include pad(1/2.3);
+  margin-bottom: span(1/2.2);
+
+  @include breakpoint($medium) {
+    @include pad(1/4);
+  }
+
+  @include breakpoint($small) {
+    @include span (6);
+    @include pad(1/1.5);
+  }
 }
 
 .card--icon {
   width: rem(118);
   height: rem(118);
   margin: 0 auto;
+  margin-bottom: rem(22);
   background-image: url(../img/services_img.png);
   background-repeat: no-repeat;
   background-position: 0 0;
+  @include breakpoint($medium) {
+    width: rem(100);
+    height: rem(100);
+    background-size: cover;
+  }
 }
 
-.card:nth-child(2) .card--icon{
+.card:nth-of-type(2) .card--icon{
   background-position: -118px 0;
+  @include breakpoint($medium) {
+    background-position: -100px 0;
+  }
 }
 
-.card:nth-child(3) .card--icon{
+.card:nth-of-type(3) .card--icon{
   background-position: -236px 0;
+  @include breakpoint($medium) {
+    background-position: -200px 0;
+  }
 }
 
-.card:nth-child(4) .card--icon{
+.card:nth-of-type(4) .card--icon{
   background-position: -354px 0;
+  @include breakpoint($medium) {
+    background-position: -300px 0;
+  }
 }
 
 .card--title {
+  margin-bottom: rem(10);
   @include font(breeserif);
   font-size: rem(17);
   color: $main-text-color;
   text-align: center;
+
 }
 
 .card--text {
