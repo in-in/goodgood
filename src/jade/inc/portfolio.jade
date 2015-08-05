@@ -4,6 +4,8 @@ mixin gallery-card(items)
             .gallery-card--pic
                 img(src='img/' + item.img, alt='portfolio image')
                 .gallery-card--details
+                    a(href="#")
+                        | Details
             h4.gallery-card--title
                 = item.title
             p.gallery-card--text
@@ -34,4 +36,3 @@ section.portolio
                     'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elitmauris nec ipsum at lacus commodo suscipit.'
                 }
             ])
-

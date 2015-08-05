@@ -30,7 +30,16 @@ module.exports = function (grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer-core')({browsers: 'last 2 versions'})
+          require('autoprefixer-core')(
+            {browsers: 'last 2 versions'}
+          ),
+          require('postcss-svg')(
+            {
+              paths: ['src/img/svgmin'],
+              defaults: "[fill]: hotpink",
+              ei: false
+            }
+          )
         ]
       },
       dist: {
@@ -82,7 +91,7 @@ module.exports = function (grunt) {
           injectChanges: true,
           open: true,
           ui: false,
-          //reloadDelay: 200,
+          reloadDelay: 200,
           browser: "chromium-browser",
           server: {
             baseDir: "src"

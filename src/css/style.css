@@ -227,7 +227,6 @@ body {
   height: 100%;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  outline: 1px dotted red;
   max-width: 60em;
   margin-left: auto;
   margin-right: auto;
@@ -690,6 +689,7 @@ input::-webkit-search-cancel-button {
     width: 83.3333333333%;
     float: left;
     margin-left: 8.3333333333%;
+    margin-bottom: 16%;
   }
 }
 
@@ -736,7 +736,7 @@ input::-webkit-search-cancel-button {
 
 @media (max-width: 40em) {
   .slide--text {
-    margin-bottom: 1.875rem;
+    display: none;
   }
 }
 
@@ -938,8 +938,9 @@ input::-webkit-search-cancel-button {
 }
 
 .portolio {
+  padding-top: 3.125rem;
+  padding-bottom: 4.375rem;
   background-color: #2e3e4f;
-  height: 555px;
 }
 
 .portolio--title {
@@ -972,6 +973,7 @@ input::-webkit-search-cancel-button {
 }
 
 .gallery {
+  padding-top: 3.75rem;
   clear: both;
 }
 
@@ -981,26 +983,38 @@ input::-webkit-search-cancel-button {
   width: 33.3333333333%;
   float: left;
   margin-right: 5.2083333333%;
-  width: 17.5rem;
-  outline: 1px dotted white;
+  width: 29.787234043%;
 }
 
 .gallery-card:last-child {
   margin-right: 0%;
 }
 
+@media (max-width: 40em) {
+  .gallery-card {
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    float: left;
+    margin-left: 4.1666666667%;
+    margin-right: 4.1666666667%;
+    margin-bottom: 4.1666666667%;
+  }
+}
+
 .gallery-card--pic {
+  margin-bottom: 1.25rem;
   position: relative;
   text-align: center;
-  transition: all 0.8s ease;
 }
 
 .gallery-card--pic img {
   display: block;
+  max-width: 100%;
   border: 0.625rem solid #fff;
 }
 
-.gallery-card--pic:hover .gallery-card--details {
+.gallery-card--details {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -1010,15 +1024,14 @@ input::-webkit-search-cancel-button {
   transition: all 0.2s ease;
 }
 
-.gallery-card--pic:hover .gallery-card--details::after {
+.gallery-card--details a {
   display: block;
-  content: 'Details';
   box-sizing: border-box;
-  width: 30%;
+  width: 51.071428571%;
   height: 2.625rem;
   margin: 0 auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 19.642857143%;
+  padding-right: 5.357142857%;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1029,9 +1042,17 @@ input::-webkit-search-cancel-button {
   font-size: 1.0625rem;
   color: #f4f4f4;
   line-height: 2.625rem;
+  background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%2056.533%22%20style%3D%22fill%3A%23f4f4f4%3B%22%20height%3D%22%22%20width%3D%22%22%3E%3Cpath%20d%3D%22M99.995%2028.08c-.002-.042-.006-.082-.01-.123%200-.02-.002-.042-.004-.062-.002-.03-.007-.06-.01-.09l-.015-.103-.002-.013c-.123-.774-.487-1.5-1.045-2.057-3.19-3.78-6.985-7.146-10.844-10.22-8.31-6.62-17.816-12.16-28.308-14.39C53.692-.268%2047.59-.322%2041.494.768c-5.545.99-10.89%203.053-15.89%205.61-7.83%204-14.98%209.514-21.21%2015.697-1.153%201.144-2.3%202.312-3.348%203.555-1.396%201.654-1.396%203.613%200%205.267%203.19%203.78%206.985%207.144%2010.844%2010.218%208.312%206.622%2017.817%2012.16%2028.31%2014.39%206.063%201.29%2012.166%201.345%2018.262.255%205.544-.992%2010.888-3.054%2015.89-5.61%207.83-4%2014.98-9.515%2021.21-15.698%201.153-1.145%202.3-2.312%203.348-3.555.558-.56.922-1.283%201.045-2.057%200-.004%200-.01.002-.013.006-.035.01-.07.014-.104.005-.03.01-.06.013-.09l.005-.06.01-.123c.002-.062.004-.124.004-.187s-.004-.124-.007-.186zM50%2047.507c-10.627%200-19.24-8.614-19.24-19.24C30.76%2017.64%2039.372%209.024%2050%209.024s19.24%208.614%2019.24%2019.24c0%2010.628-8.613%2019.242-19.24%2019.242z%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2228.266%22%20r%3D%226.369%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 15.638297872% 50%;
+  background-size: 25% auto;
   border: 1px solid #f8f8f8;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.gallery-card--pic:hover .gallery-card--details {
+  display: block;
 }
 
 .gallery-card--title {

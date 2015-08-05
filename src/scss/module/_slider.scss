@@ -49,6 +49,7 @@
   @include breakpoint($small) {
     @include span(10);
     @include pre(1);
+    margin-bottom: 16%;
   }
 }
 
@@ -83,7 +84,7 @@
   }
 
   @include breakpoint($small) {
-    margin-bottom: rem(30);
+    display: none;
   }
 }
 

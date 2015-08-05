@@ -1,6 +1,7 @@
 .portolio {
+  padding-top: rem(50);
+  padding-bottom: rem(70);
   background-color: $dark-blue-bg;
-  height: 555px;
 }
 
 .portolio--title {
@@ -27,6 +28,7 @@
 }
 
 .gallery {
+  padding-top: rem(60);
   clear: both;
 }
 
@@ -34,28 +36,33 @@
   box-sizing: border-box;
   @include span(4);
   @include post(1/1.6);
-  width: rem(280);
-
-  outline: 1px dotted white;
+  width: 29.787234043%;
 
   &:last-child {
     @include post(0);
   }
+
+  @include breakpoint($small) {
+    @include span(5);
+    @include squish(1/2);
+    margin-bottom: span(1/2);
+  }
 }
 
 .gallery-card--pic {
+  margin-bottom: rem(20);
   position: relative;
   text-align: center;
-  transition: all .8s ease;
 
   img {
     display: block;
+    max-width: 100%;
     border: rem(10) solid #fff;
   }
-
 }
 
-.gallery-card--pic:hover .gallery-card--details {
+.gallery-card--details {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -64,26 +71,32 @@
   background-color: rgba($dark-blue-bg,.6);
   transition: all .2s ease;
 
-  &::after {
+  a {
     display: block;
-    content: 'Details';
     box-sizing: border-box;
-    width: 30%;
+    width: 51.071428571%;
     height: rem(42);
     margin: 0 auto;
-    padding-left: rem(15);
-    padding-right: rem(15);
+    padding-left: 19.642857143%;
+    padding-right: 5.357142857%;
     @include vert-center;
     @include font(breeserif);
     font-size: rem(17);
     color: #f4f4f4;
     line-height: rem(42);
+    background-image: svg("eye.min", '[fill]: #f4f4f4');
+    background-repeat: no-repeat;
+    background-position: 15.638297872% 50%;
+    background-size: 25% auto;
     border: 1px solid #f8f8f8;
     border-radius: 4px;
     cursor: pointer;
   }
 }
 
+.gallery-card--pic:hover .gallery-card--details {
+  display: block;
+}
 
 .gallery-card--title {
   margin-bottom: rem(10);
