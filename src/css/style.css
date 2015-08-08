@@ -227,6 +227,7 @@ body {
   height: 100%;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  outline: 1px dotted red;
   max-width: 60em;
   margin-left: auto;
   margin-right: auto;
@@ -938,7 +939,6 @@ input::-webkit-search-cancel-button {
 }
 
 .portfolio {
-  padding-top: 3.125rem;
   padding-bottom: 3.75rem;
   background-color: #2e3e4f;
 }
@@ -947,6 +947,7 @@ input::-webkit-search-cancel-button {
   max-width: 60em;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 3.125rem;
   margin-bottom: 3.75rem;
 }
 
@@ -1184,5 +1185,72 @@ input::-webkit-search-cancel-button {
   color: #bcbcbc;
   line-height: 0.9375rem;
   text-align: left;
+}
+
+.features {
+  background-color: hotpink;
+  height: 231px;
+}
+
+.features--header {
+  text-align: center;
+}
+
+.features--title {
+  font-family: "Oswald", san-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: #2190c1;
+  text-transform: uppercase;
+}
+
+.features--subtitle {
+  padding: 0 12.5%;
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: #515862;
+}
+
+.feature {
+  width: 20%;
+  float: left;
+  margin-right: 6.6666666667%;
+  background-color: #fff;
+  outline: 1px dotted black;
+}
+
+.feature:last-child {
+  width: 20%;
+  float: right;
+  margin-right: 0;
+  background-color: palegreen;
+}
+
+.feature--title {
+  margin-bottom: 0.625rem;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.0625rem;
+  color: #2b99cc;
+}
+
+.feature--text {
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.6875rem;
+  color: #515862;
+  line-height: 0.9375rem;
+}
+
+.feature--details a {
+  color: #2b99cc;
+  font-family: "Ubuntu", san-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */

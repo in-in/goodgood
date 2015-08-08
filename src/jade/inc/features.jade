@@ -1,0 +1,37 @@
+mixin feature(items)
+    each item in items
+        //- .features-list--item
+        .feature
+            h4.feature--title
+                = item.title
+            p.feature--text
+                = item.text
+                span.feature--details
+                    a(href="#")|  Details...
+
+
+section.features
+    .container
+        .features--header
+            h1.features--title What we offer
+            p.features--subtitle
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+        .features-list
+            +feature([
+                {
+                    'title': 'Web Design',
+                    'text': 'Lorem ipsum dolor sit amet, consect etur adipiscing elit.Ut ultricies sagit tism agnaa commodo.Ut eget eros mauris, ut cursus urna vestibuluman ipsum primis in faucibus orci luctuset.'
+                },
+                {
+                    'title': 'Search Optimization',
+                    'text': 'Lorem ipsum dolor sit amet, consect etur adipiscing elit.Ut ultricies sagit tism agnaa commodo.Ut eget eros mauris, ut cursus urna vestibuluman ipsum primis in faucibus.'
+                },
+                {
+                    'title': 'Online Shop',
+                    'text': 'Lorem ipsum dolor sit amet, consect etur adipiscing elit.Ut ultricies sagit tism agnaa commodo.Ut eget eros mauris, ut cursus urna vestibuluman ipsum primis in faucibus orci luctuset.'
+                },
+                {
+                    'title': 'Social Media',
+                    'text': 'Lorem ipsum dolor sit amet, consect etur adipiscing elit.Ut ultricies sagit tism agnaa commodo.Ut eget eros mauris, ut cursus urna vestibuluman ipsum primis in faucibus orci luc.'
+                }
+            ])

@@ -1,0 +1,55 @@
+.features {
+  background-color: hotpink;
+  height: 231px;
+}
+
+.features--header {
+  text-align: center;
+}
+
+.features--title {
+  @include font(oswald, bold);
+  font-size: rem(40);
+  color: $main-blue;
+  text-transform: uppercase;
+}
+
+.features--subtitle {
+  padding: 0 12.5%;
+  @include font(ubuntu);
+  font-size: rem(12);
+  color: $main-text-color;
+}
+
+.feature {
+  @include span(3 of $feature_susy);
+  background-color: #fff;
+  outline: 1px dotted black;
+
+  &:last-child {
+    @include span(3 of $feature_susy last);
+    background-color: palegreen;
+  }
+}
+
+.feature {
+}
+
+.feature--title {
+  margin-bottom: rem(10);
+  @include font(breeserif);
+  font-size: rem(17);
+  color: $features-blue;
+}
+
+.feature--text {
+  @include font(ubuntu);
+  font-size: rem(11);
+  color: $main-text-color;
+  line-height: rem(15);
+}
+
+.feature--details a {
+  color: $features-blue;
+  @include font(ubuntu, bold);
+}

@@ -1,11 +1,11 @@
 .portfolio {
-  padding-top: rem(50);
   padding-bottom: rem(60);
   background-color: $dark-blue-bg;
 }
 
 .portfolio--header {
   @include container();
+  padding-top: rem(50);
   margin-bottom: rem(60);
 }
 
