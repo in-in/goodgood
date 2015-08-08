@@ -1,18 +1,31 @@
-.portolio {
+.portfolio {
   padding-top: rem(50);
-  padding-bottom: rem(70);
+  padding-bottom: rem(60);
   background-color: $dark-blue-bg;
 }
 
-.portolio--title {
-  @include span(first);
-  @include font(breeserif);
-  color:  $orange;
-  font-size: rem(30);
+.portfolio--header {
+  @include container();
+  margin-bottom: rem(60);
 }
 
-.portolio--more-link {
+.portfolio--title {
+  @include span(first);
+  @include font(breeserif);
+  color: $orange;
+  font-size: rem(30);
+
+  @include breakpoint($small) {
+    @include span(full);
+    text-align: center;
+  }
+}
+
+.portfolio--more-link {
   @include span(last);
+  @include breakpoint($small) {
+    display: none;
+  }
 
   a{
     @include font(oswald, bold);
@@ -27,25 +40,64 @@
   }
 }
 
+.portfolio--more-link.portfolio--more-link__bottom {
+  display: none;
+  
+  @include breakpoint($small) {
+    display: block;
+    @include span(full);
+    padding-top: span(1/2);
+    text-align: center;
+  }
+}
+
 .gallery {
-  padding-top: rem(60);
-  clear: both;
+  @include container();
+}
+
+.gallery--item {
+  @include gallery(4 of $gallery_susy);
+  margin-bottom: span(1/2);
+
+  &:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($medium) {
+    @include gallery(6 of $gallery_susy);
+
+    &:nth-last-child(-n+3) {
+      margin-bottom: span(1/2);
+    }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint($small) {
+    @include gallery(12 of $gallery_susy);
+    float: none;
+    margin-bottom: span(1);
+
+    &:nth-last-child(-n+3),
+    &:nth-last-child(-n+2) {
+      margin-bottom: span(1);
+    }
+    
+    &:nth-last-child(-n+1) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .gallery-card {
   box-sizing: border-box;
-  @include span(4);
-  @include post(1/1.6);
-  width: 29.787234043%;
+  width: 100%;
+  max-width: rem(280);
 
-  &:last-child {
-    @include post(0);
-  }
-
-  @include breakpoint($small) {
-    @include span(5);
-    @include squish(1/2);
-    margin-bottom: span(1/2);
+  @include breakpoint($medium) {
+    margin: 0 auto;
   }
 }
 
@@ -69,7 +121,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba($dark-blue-bg,.6);
-  transition: all .2s ease;
 
   a {
     display: block;

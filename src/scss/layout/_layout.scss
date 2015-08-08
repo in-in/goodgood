@@ -22,6 +22,12 @@ $nav_susy: (
   gutter-position: inside,
 );
 
+$gallery_susy: (
+  columns: 12,
+  gutters: 1/0.7,
+  gutter-position: after,
+);
+
 
 .container {
   height: 100%;
