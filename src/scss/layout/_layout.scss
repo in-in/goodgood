@@ -42,7 +42,33 @@ $feature_susy: (
   padding-right: rem(10);
   padding-left: rem(10);
 
-  outline: 1px dotted red;
+  //outline: 1px dotted red;
 
   @include container();
+}
+
+
+%list-item {
+  @include span(3 of $feature_susy);
+  
+  &:last-child {
+    @include span(3 of $feature_susy last);
+  }
+  
+  @include breakpoint($small) {
+    @include span(6 of $feature_susy);
+    margin-bottom: gutter($feature_susy);
+    
+    &:nth-child(2n) {
+      @include span(6 of $feature_susy last);
+    }
+
+    &:nth-child(odd) {
+      @include break;
+    }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
 }

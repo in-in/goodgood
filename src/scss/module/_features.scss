@@ -1,13 +1,15 @@
 .features {
-  background-color: hotpink;
-  height: 231px;
+  padding-bottom: rem(30);
 }
 
 .features--header {
+  padding-top: rem(32);
+  margin-bottom: rem(40);
   text-align: center;
 }
 
 .features--title {
+  margin-bottom: rem(23);
   @include font(oswald, bold);
   font-size: rem(40);
   color: $main-blue;
@@ -21,18 +23,12 @@
   color: $main-text-color;
 }
 
-.feature {
-  @include span(3 of $feature_susy);
-  background-color: #fff;
-  outline: 1px dotted black;
-
-  &:last-child {
-    @include span(3 of $feature_susy last);
-    background-color: palegreen;
-  }
+.features-list {
+  @include container();
 }
 
 .feature {
+  @extend %list-item;
 }
 
 .feature--title {

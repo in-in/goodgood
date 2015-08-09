@@ -1,3 +1,7 @@
+.services {
+  padding-bottom: rem(30);
+}
+
 .services--title {
   position: relative;
   width: rem(144);
@@ -17,19 +21,28 @@
   z-index: 3;
 }
 
+.services--list {
+  @include container();
+}
+
+//.card {
+//  @include span (3);
+//  @include pad(1/2.3);
+//  margin-bottom: span(1/2.2);
+//
+//  @include breakpoint($medium) {
+//    @include pad(1/4);
+//  }
+//
+//  @include breakpoint($small) {
+//    @include span (6);
+//    @include pad(1/1.5);
+//  }
+//}
+
 .card {
-  @include span (3);
-  @include pad(1/2.3);
-  margin-bottom: span(1/2.2);
-
-  @include breakpoint($medium) {
-    @include pad(1/4);
-  }
-
-  @include breakpoint($small) {
-    @include span (6);
-    @include pad(1/1.5);
-  }
+  @extend %list-item;
+  @include pad(1/5);
 }
 
 .card--icon {
@@ -71,7 +84,7 @@
 .card--title {
   margin-bottom: rem(10);
   @include font(breeserif);
-  font-size: rem(17);
+  font-size: rem(16.5);
   color: $main-text-color;
   text-align: center;
 
