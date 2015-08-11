@@ -1289,4 +1289,59 @@ input::-webkit-search-cancel-button {
   height: 336px;
   margin-top: 30px;
 }
+
+.testimonials--title {
+  font-family: "Oswald", san-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.6875rem;
+  color: #2190c1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.testimonials--slider-wrap {
+  width: 82.127659574%;
+  height: 260px;
+  margin: 0 auto;
+  margin-top: 2.1875rem;
+  background-color: mintcream;
+}
+
+.comment {
+  width: 100%;
+  background-color: rgba(0, 128, 0, 0.6);
+}
+
+.comment--text {
+  margin-bottom: 3.125rem;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4375rem;
+  color: #515862;
+  text-align: center;
+}
+
+.comment--job {
+  text-align: center;
+}
+
+.comment--job-name,
+.comment--job-title {
+  font-size: 0.75rem;
+  color: #f98561;
+}
+
+.comment--job-name {
+  font-family: "Ubuntu", san-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.comment--job-title {
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 /*# sourceMappingURL=style.css.map */

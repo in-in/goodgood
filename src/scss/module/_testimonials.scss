@@ -3,3 +3,49 @@
   height: 336px;
   margin-top: 30px;
 }
+
+.testimonials--title {
+  @include font(oswald, bold);
+  font-size: rem(27);
+  color: $main-blue;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.testimonials--slider-wrap {
+  width: 82.127659574%;
+  height: 260px;
+  margin: 0 auto;
+  margin-top: rem(35);
+  background-color: mintcream;
+}
+.comment {
+  width: 100%;
+  background-color: rgba(green, .6);
+}
+
+.comment--text {
+  margin-bottom: rem(50);
+  @include font(breeserif);
+  font-size: rem(23);
+  color: $main-text-color;
+  text-align: center;
+}
+
+.comment--job {
+  text-align: center;
+}
+
+.comment--job-name,
+.comment--job-title {
+  font-size: rem(12);
+  color: $orange;
+}
+
+.comment--job-name {
+  @include font(ubuntu, bold);
+}
+
+.comment--job-title {
+  @include font(ubuntu);
+}
