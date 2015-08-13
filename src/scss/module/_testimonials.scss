@@ -1,7 +1,5 @@
 .testimonials {
-  background-color: hotpink;
-  height: 336px;
-  margin-top: 30px;
+  margin-top: rem(30);
 }
 
 .testimonials--title {
@@ -14,14 +12,16 @@
 
 .testimonials--slider-wrap {
   width: 82.127659574%;
-  height: 260px;
   margin: 0 auto;
   margin-top: rem(35);
-  background-color: mintcream;
 }
+
+.reviews-slider {
+  margin-bottom: rem(30);
+}
+
 .comment {
   width: 100%;
-  background-color: rgba(green, .6);
 }
 
 .comment--text {
@@ -48,4 +48,55 @@
 
 .comment--job-title {
   @include font(ubuntu);
+}
+
+.testimonials--persons-wrap {
+  text-align: center;
+}
+
+.person {
+  display: inline-block;
+  width: rem(67);
+  height: rem(67);
+  margin-bottom: rem(16);
+  border-radius: 50%;
+  cursor: pointer;
+  background: {
+    color: $person-bg;
+    image: svg("woman.min", '[fill]: #6b6b6b');
+    repeat: no-repeat;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    width: rem(67);
+    height: rem(6);
+    margin-top: calc(100% + 0.813rem);
+    background: $person-bg;
+
+  }
+
+  &:nth-child(2) {
+    background: {
+      image: svg("man.min", '[fill]: #6b6b6b');
+    }
+  }
+}
+
+.person__current {
+  background-color: $orange;
+  position: relative;
+  &::after {
+    background-color: $orange;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + .5rem);
+    left: calc(50% - .313rem);
+    border-bottom: .313rem solid $orange;
+    border-left: .313rem solid transparent;
+    border-right: .313rem solid transparent;
+  }
 }
