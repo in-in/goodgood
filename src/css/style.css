@@ -232,6 +232,7 @@ body {
   height: 100%;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  outline: 1px dotted red;
   max-width: 60em;
   margin-left: auto;
   margin-right: auto;
@@ -1387,6 +1388,8 @@ input::-webkit-search-cancel-button {
   position: absolute;
   top: calc(100% + .5rem);
   left: calc(50% - .313rem);
+  -webkit-transform: scale(0.9999);
+          transform: scale(0.9999);
   border-bottom: 0.313rem solid #f98561;
   border-left: .313rem solid transparent;
   border-right: .313rem solid transparent;
@@ -1394,6 +1397,82 @@ input::-webkit-search-cancel-button {
 
 footer {
   background-color: #2e3e4f;
-  height: 100px;
+}
+
+.footer-row {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2.5rem;
+}
+
+.footer-row:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.footer-col:nth-child(1) {
+  width: 22.4622954327%;
+  float: left;
+  margin-left: 0;
+  margin-right: -100%;
+}
+
+.footer-col:nth-child(2) {
+  width: 26.2006631725%;
+  float: left;
+  margin-left: 26.0277391521%;
+  margin-right: -100%;
+}
+
+.footer-col:nth-child(3) {
+  width: 24.5962134988%;
+  float: left;
+  margin-left: 55.7938460441%;
+  margin-right: -100%;
+}
+
+.footer-col:nth-child(4) {
+  width: 16.0444967376%;
+  float: left;
+  margin-left: 83.9555032624%;
+  margin-right: -100%;
+}
+
+.footer-col--title {
+  margin-bottom: 1.25rem;
+  font-family: "Oswald", san-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4375rem;
+  color: #f98561;
+  text-transform: uppercase;
+}
+
+.footer-col--text {
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: #a3afb2;
+  line-height: 2;
+}
+
+.footer-col--link {
+  display: block;
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: #2190c1;
+}
+
+.footer-col--dash {
+  width: 100%;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 /*# sourceMappingURL=style.css.map */

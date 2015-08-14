@@ -1,4 +1,54 @@
 footer {
   background-color: $dark-blue-bg;
-  height: 100px;
+}
+
+.footer-row {
+  @include container();
+  padding-top: rem(40);
+}
+
+.footer-col:nth-child(1) {
+  @include span(1 of $footer_susy first);
+}
+
+.footer-col:nth-child(2) {
+  @include span(1 at 2 of $footer_susy);
+}
+
+.footer-col:nth-child(3) {
+  @include span(1 at 3 of $footer_susy);
+}
+
+.footer-col:nth-child(4) {
+  @include span(1 of $footer_susy last);
+}
+
+.footer-col--title {
+  margin-bottom: rem(20);
+  @include font(oswald, bold);
+  font-size: rem(23);
+  color: $orange;
+  text-transform: uppercase;
+}
+
+.footer-col--text {
+  @include font(ubuntu);
+  font-size: rem(12);
+  color: $footer-text;
+  line-height: 2;
+}
+
+.footer-col--link {
+  display: block;
+  @include font(ubuntu);
+  font-size: rem(12);
+  color: $main-blue;
+}
+
+.footer-col--dash {
+  width: 100%;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgba(white, .3);
 }

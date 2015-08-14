@@ -95,6 +95,7 @@
     position: absolute;
     top: calc(100% + .5rem);
     left: calc(50% - .313rem);
+    transform: scale(0.9999);
     border-bottom: .313rem solid $orange;
     border-left: .313rem solid transparent;
     border-right: .313rem solid transparent;

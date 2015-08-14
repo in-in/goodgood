@@ -36,13 +36,24 @@ $feature_susy: (
   gutter-position: after,
 );
 
+$footer_susy: (
+  columns: 1.4 1.633 1.533 1,
+  output: isolate,
+  gutters: 1/4.5,
+  gutter-position: after,
+);
+
+//col-1: 210px 1.4
+//col-2: 245px 1.633
+//col-3: 230px 1.533
+//col-4: 150px
 
 .container {
   height: 100%;
   padding-right: rem(10);
   padding-left: rem(10);
 
-  //outline: 1px dotted red;
+  outline: 1px dotted red;
 
   @include container();
 }
