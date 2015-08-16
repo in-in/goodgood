@@ -5,10 +5,15 @@ footer {
 .footer-row {
   @include container();
   padding-top: rem(40);
+  padding-bottom: rem(30);
 }
 
 .footer-col:nth-child(1) {
   @include span(1 of $footer_susy first);
+
+    @include breakpoint($medium) {
+      //background-color: darkseagreen;
+    }
 }
 
 .footer-col:nth-child(2) {
@@ -23,6 +28,13 @@ footer {
   @include span(1 of $footer_susy last);
 }
 
+//.footer-col {
+//  @include breakpoint($medium) {
+//    background-color: hotpink;
+//    @include span(6 of 12);
+//  }
+//}
+
 .footer-col--title {
   margin-bottom: rem(20);
   @include font(oswald, bold);
@@ -31,24 +43,120 @@ footer {
   text-transform: uppercase;
 }
 
-.footer-col--text {
-  @include font(ubuntu);
-  font-size: rem(12);
-  color: $footer-text;
-  line-height: 2;
+.footer-line {
+
+  &::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    margin-top: rem(10);
+    margin-bottom: rem(10);
+    background-color: rgba(white, .3);
+  }
 }
 
-.footer-col--link {
-  display: block;
+.footer-line:last-child::after {
+  display: none;
+}
+
+.footer-line--text {
   @include font(ubuntu);
-  font-size: rem(12);
+  font-size: rem(11);
+  color: $footer-text;
+  line-height: 1.8;
+}
+
+.footer-line--link {
+  display: block;
+  padding: .3rem 0;
+  @include font(ubuntu);
+  font-size: rem(11);
   color: $main-blue;
 }
 
-.footer-col--dash {
-  width: 100%;
-  height: 1px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: rgba(white, .3);
+.footer-line--img {
+  float: left;
+  margin-right: rem(10);
+}
+
+.newsletter-form {
+
+  &::after {
+    @include cf;
+  }
+
+  label {
+    @include font(ubuntu);
+    color: $main-blue;
+    font-size: rem(13);
+  }
+  
+  input[type='email'] {
+    display: block;
+    padding: 0 .5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: rem(15);
+    outline: none;
+    border: none;
+    color: $main-text-color;
+    line-height: rem(28);
+    background-color: #fff;
+    border-radius: rem(3);
+  }
+
+  input[type='submit'] {
+    display: block;
+    box-sizing: border-box;
+    float: right;
+    padding: 0 1rem;
+    margin-top: rem(15);
+    outline: none;
+    border: none;
+    @include font(ubuntu);
+    color: #fff;
+    font-size: rem(13);
+    line-height: rem(28);
+    background-color: $main-blue;
+    border-radius: rem(3);
+  }
+}
+
+.contact-item {
+  margin-bottom: rem(30);
+  background: {
+    repeat: no-repeat;
+    position: 0 0;
+    size: rem(35) rem(35);
+  }
+
+  &:nth-of-type(1){
+    background-image: svg("phone.min", "[fill]: #2190c1");
+  }
+
+  &:nth-of-type(2){
+    background-image: svg("mobile.min", "[fill]: #2190c1");
+  }
+
+  &:nth-of-type(3){
+    background-image: svg("mail.min", "[fill]: #2190c1");
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact-item--stuff {
+  display: inline-block;
+  padding-left: rem(44);
+  @include font(ubuntu);
+  color: $footer-text;
+  font-size: rem(13);
+  line-height: 1.3;
+
+  a {
+    color: $footer-text;
+  }
 }

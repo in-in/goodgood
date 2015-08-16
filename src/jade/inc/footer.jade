@@ -1,40 +1,112 @@
+mixin footer-line(items)
+    each item in items
+        .footer-line
+            if item.img
+                img(src='img/' + item.img, alt='image').footer-line--img
+
+            if item.text
+                p.footer-line--text= item.text
+
+            if item.link
+                a(href="#").footer-line--link= item.link
+
+            if item.date
+                span.footer-line--text= item.date
+
+
 footer
     .container
         .footer-row
             .footer-col
-                .footer-col--title
+                h4.footer-col--title
                     | Twitter feeds
-                p.footer-col--text
-                    | Check out this great theme item
-                a(href="#").footer-col--link
-                    | http://tadjalskfj.com
-                span.footer-col--text
-                    | 2 weeks ago
-                .footer-col--dash
 
-                p.footer-col--text
-                    | Check out this great theme item
-                a(href="#").footer-col--link
-                    | http://tadjalskfj.com
-                span.footer-col--text
-                    | 2 weeks ago
-                .footer-col--dash
+                +footer-line([
+                    {
+                        'text': 'Check out this great theme item',
+                        'link': 'http://tadjalskfj.com',
+                        'date': '2 weeks ago'
+                    }
+                ])
 
+                +footer-line([
+                    {
+                        'text': 'Check out this great theme item for',
+                        'link': 'http://tadjalskfj.com',
+                        'date': '2 weeks ago'
+                    }
+                ])
+
+                +footer-line([
+                    {
+                        'text': 'Check out this great theme item for you',
+                        'link': 'http://tadjalskfj.com',
+                        'date': '2 weeks ago'
+                    }
+                ])
 
             .footer-col
-                .footer-col--title
+                h4.footer-col--title
                     | Newsletter
-                p.footer-col--text
-                    | “Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris necip at lacus commodo suscipit praesent sollicitudin enim vel mirhon” “Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris necip at lacus commodo suscipit praesent sollicitudin enim vel mirhon”
+
+                +footer-line([
+                    {
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adip iscing elit. Ut ultricies sagittis magna a comm. Ut eget eros mauris, ut cursus urna'
+                    }
+                ])
+
+                .footer-line
+                    form.newsletter-form
+                        label Your Email Address
+                        input(type='email')
+                        input(type='submit' value='Sign Up')
 
             .footer-col
-                .footer-col--title
+                h4.footer-col--title
                     | Recent projects
-                p.footer-col--text
-                    | “Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris necip at lacus commodo suscipit praesent sollicitudin enim vel mirhon” “Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris necip at lacus commodo suscipit praesent sollicitudin enim vel mirhon”
+
+                +footer-line([
+                    {
+                        'img': 'recent-projects-img.png',
+                        'text': 'Sketchy Business Card',
+                        'link': 'http://tadjalskfj.com',
+                        'date': '2 weeks ago'
+                    }
+                ])
+                +footer-line([
+                    {
+                        'img': 'recent-projects-img.png',
+                        'text': 'Message Boards in Nature',
+                        'link': 'http://tadjalskfj.com',
+                        'date': '2 weeks ago'
+                    }
+                ])
+                +footer-line([
+                    {
+                        'img': 'recent-projects-img.png',
+                        'text': 'Website Design Kit',
+                        'link': 'http://tadjalskfj.com',
+                        'date': '2 weeks ago'
+                    }
+                ])
 
             .footer-col
-                .footer-col--title
+                h4.footer-col--title
                     | Contact
-                p.footer-col--text
-                    | “Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris necip at lacus commodo suscipit praesent sollicitudin enim vel mirhon” “Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris necip at lacus commodo suscipit praesent sollicitudin enim vel mirhon”
+                .contact-item
+                    span.contact-item--stuff
+                        | 1 - 000 - 000-0000
+                    span.contact-item--stuff
+                        | 1 - 000 - 000-0000
+                .contact-item
+                    span.contact-item--stuff
+                        | 1 - 000 - 000-0000
+                    span.contact-item--stuff
+                        | 1 - 000 - 000-0000
+                .contact-item
+                    span.contact-item--stuff
+                        a(href="mailto:abcdefg@hijs.dfh", target="_top")
+                            | abcdefg@hijs.dfh
+                    span.contact-item--stuff
+                        a(href="mailto:fjashfaf@jkfs.ckd", target="_top")
+                            | fjashfaf@jkfs.ckd

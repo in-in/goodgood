@@ -60,3 +60,11 @@ $font-stack: (
 
   transform: translateY(-50%);
 }
+
+// CLEARFIX
+
+@mixin cf {
+  display: table;
+  content: "";
+  clear: both;
+}
