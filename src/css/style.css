@@ -1592,6 +1592,7 @@ footer {
 
 .newsletter-form input[type='email'] {
   display: block;
+  height: 1.75rem;
   padding: 0 0.5rem;
   box-sizing: border-box;
   width: 100%;
