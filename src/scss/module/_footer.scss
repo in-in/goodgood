@@ -12,28 +12,77 @@ footer {
   @include span(1 of $footer_susy first);
 
     @include breakpoint($medium) {
-      //background-color: darkseagreen;
+      @include span (4 of $feature_susy);
     }
+
+  @include breakpoint($small) {
+    @include span (6 of $feature_susy);
+  }
 }
 
 .footer-col:nth-child(2) {
   @include span(1 at 2 of $footer_susy);
+
+  @include breakpoint($medium) {
+    @include span (4 of $feature_susy);
+    margin-left: 0;
+  }
+
+  @include breakpoint($small) {
+    @include span (6 of $feature_susy);
+    margin-right: 0;
+  }
 }
 
 .footer-col:nth-child(3) {
   @include span(1 at 3 of $footer_susy);
+
+  @include breakpoint($medium) {
+    @include span (4 of $feature_susy);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @include breakpoint($small) {
+    @include span (12 of $feature_susy);
+    
+    .footer-col--title {
+      text-align: center;
+    }
+
+    .footer-line {
+      @include span(4 of 12 1/4 after);
+      
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
 
 .footer-col:nth-child(4) {
   @include span(1 of $footer_susy last);
+
+  @include breakpoint($medium) {
+    @include span (12 of $feature_susy);
+    margin-left: 0;
+
+    .footer-col--title {
+      text-align: center;
+    }
+  }
 }
 
-//.footer-col {
-//  @include breakpoint($medium) {
-//    background-color: hotpink;
-//    @include span(6 of 12);
-//  }
-//}
+.footer-col {
+  @include breakpoint($medium) {
+    margin-bottom: 2rem;
+  }
+}
+
 
 .footer-col--title {
   margin-bottom: rem(20);
@@ -48,6 +97,7 @@ footer {
   &::after {
     display: block;
     content: '';
+    clear: both;
     width: 100%;
     height: 1px;
     margin-top: rem(10);
@@ -68,7 +118,7 @@ footer {
 }
 
 .footer-line--link {
-  display: block;
+  display: inline-block;
   padding: .3rem 0;
   @include font(ubuntu);
   font-size: rem(11);
@@ -76,6 +126,7 @@ footer {
 }
 
 .footer-line--img {
+  display: block;
   float: left;
   margin-right: rem(10);
 }
@@ -127,7 +178,7 @@ footer {
   margin-bottom: rem(30);
   background: {
     repeat: no-repeat;
-    position: 0 0;
+    position: 0 center;
     size: rem(35) rem(35);
   }
 
@@ -146,10 +197,17 @@ footer {
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include breakpoint($medium) {
+    min-width: rem(155);
+    width: rem(155);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .contact-item--stuff {
-  display: inline-block;
+  display: block;
   padding-left: rem(44);
   @include font(ubuntu);
   color: $footer-text;
