@@ -1,6 +1,8 @@
+- var svgSprite = true;
+
 .mp-filter
     ul.mp-filter--list
-        li.mp-filter--item
+        li.mp-filter--item.mp-filter--item__active
             a(href="#") all
         li.mp-filter--item
             a(href="#") web design
@@ -11,10 +13,10 @@
         li.mp-filter--item
             a(href="#") illustration
     .mp-filter--view
-        a(href="#").icon-row
-            | Row
-        a(href="#").icon-grid
-            | Grid
+        svg#js-row.mp-filter--icon
+            use(xlink:href="#icon-row")
 
+        svg#js-grid.mp-filter--icon.mp-filter--icon__active
+            use(xlink:href="#icon-grid")
 
 

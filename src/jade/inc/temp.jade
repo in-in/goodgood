@@ -29,11 +29,13 @@ html(lang="en")
         block header
             include header
         block index
-        //- block svgsrite
-            svgsrite
-            include svgsprite
         block footer
             include footer
+
+        if svgSprite
+            block svgsrite
+                //svgsrite
+                include svgsprite
 
         block script
             //script

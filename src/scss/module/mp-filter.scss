@@ -1,6 +1,6 @@
 .mp-filter {
   width: 100%;
-  padding-left: rem(52);
+  padding-left: rem(19);
   padding-right: rem(52);
   border: 1px solid rgba($main-blue, .1);
   @include cf;
@@ -8,7 +8,6 @@
 
 .mp-filter--list {
   float: left;
-  height: rem(53);
   list-style: none;
 
   &::after {
@@ -23,20 +22,22 @@
 .mp-filter--item a {
   display: block;
   height: rem(53);
+  padding-left: rem(33);
   @include font(ubuntu);
   font-size: rem(15);
   color: $main-text-color;
   line-height: rem(53);
-  vertical-align: middle;
   text-transform: uppercase;
+  
+  &:hover {
+    color: $main-blue;
+  }
 
   &::after {
     content: '';
-    box-sizing: border-box;
     display: inline-block;
     height: rem(25);
     margin-left: rem(33);
-    margin-right: rem(33);
     vertical-align: middle;
     border-right: 1px solid #c4c4c4;
   }
@@ -49,25 +50,29 @@
   }
 }
 
-.mp-filter--view {
-  float: right;
+.mp-filter--item__active a {
+  color: $main-blue;
 }
 
-.mp-filter--view a {
+.mp-filter--view {
+  float: right;
+  height: rem(53);
+}
+
+.mp-filter--icon {
   display: block;
+  @include vert-center;
   float: left;
   width: rem(24);
   height: rem(24);
-  text-indent: 101%;
-  overflow: hidden;
-  white-space: nowrap;
-  background-repeat: no-repeat;
+  cursor: pointer;
+  fill: #aaa;
 
   &:first-child {
-    background-image: svg("row.min", "[fill]: #2190c1");;
+    margin-right: rem(15);
   }
+}
 
-  &:last-child {
-    background-image: svg("grid.min", "[fill]: #2190c1");;
-  }
+.mp-filter--icon__active {
+  fill: $main-blue;
 }

@@ -1679,7 +1679,7 @@ input::-webkit-search-cancel-button {
 
 .mp-filter {
   width: 100%;
-  padding-left: 3.25rem;
+  padding-left: 1.1875rem;
   padding-right: 3.25rem;
   border: 1px solid rgba(33, 144, 193, 0.1);
   display: table;
@@ -1689,7 +1689,6 @@ input::-webkit-search-cancel-button {
 
 .mp-filter--list {
   float: left;
-  height: 3.3125rem;
   list-style: none;
 }
 
@@ -1706,23 +1705,25 @@ input::-webkit-search-cancel-button {
 .mp-filter--item a {
   display: block;
   height: 3.3125rem;
+  padding-left: 2.0625rem;
   font-family: "Ubuntu", san-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
   color: #515862;
   line-height: 3.3125rem;
-  vertical-align: middle;
   text-transform: uppercase;
+}
+
+.mp-filter--item a:hover {
+  color: #2190c1;
 }
 
 .mp-filter--item a::after {
   content: '';
-  box-sizing: border-box;
   display: inline-block;
   height: 1.5625rem;
   margin-left: 2.0625rem;
-  margin-right: 2.0625rem;
   vertical-align: middle;
   border-right: 1px solid #c4c4c4;
 }
@@ -1731,27 +1732,34 @@ input::-webkit-search-cancel-button {
   display: none;
 }
 
-.mp-filter--view {
-  float: right;
+.mp-filter--item__active a {
+  color: #2190c1;
 }
 
-.mp-filter--view a {
+.mp-filter--view {
+  float: right;
+  height: 3.3125rem;
+}
+
+.mp-filter--icon {
   display: block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   float: left;
   width: 1.5rem;
   height: 1.5rem;
-  text-indent: 101%;
-  overflow: hidden;
-  white-space: nowrap;
-  background-repeat: no-repeat;
+  cursor: pointer;
+  fill: #aaa;
 }
 
-.mp-filter--view a:first-child {
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2214%22%20width%3D%2219%22%20viewBox%3D%220%200%2019%2014%22%20style%3D%22fill%3A%232190c1%3B%22%3E%3Cpath%20d%3D%22M0%200h19v4H0zM0%205h19v4H0zM0%2010h19v4H0z%22%2F%3E%3C%2Fsvg%3E");
+.mp-filter--icon:first-child {
+  margin-right: 0.9375rem;
 }
 
-.mp-filter--view a:last-child {
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2075%2075%22%20style%3D%22fill%3A%232190c1%3B%22%20height%3D%22%22%20width%3D%22%22%3E%3Cpath%20d%3D%22M25.78%200h23.44v23.438H25.78zm0%200M51.563%200H75v23.438H51.562zm0%200M0%200h23.438v23.438H0zm0%200M25.78%2025.78h23.44v23.44H25.78zm0%200M51.563%2025.78H75v23.44H51.562zm0%200M0%2025.78h23.438v23.44H0zm0%200M25.78%2051.563h23.44V75H25.78zm0%200M51.563%2051.563H75V75H51.562zm0%200M0%2051.563h23.438V75H0zm0%200%22%2F%3E%3C%2Fsvg%3E");
+.mp-filter--icon__active {
+  fill: #2190c1;
 }
 
 footer {
