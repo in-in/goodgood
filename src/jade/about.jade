@@ -1,0 +1,10 @@
+extends inc/temp
+
+append var
+    - var thisPage = 'About'
+    - var pageTitle = pageTitle.concat(' | ' + thisPage)
+
+block index
+
+    block hero
+        include inc/hero

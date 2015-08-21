@@ -1,0 +1,73 @@
+.mp-filter {
+  width: 100%;
+  padding-left: rem(52);
+  padding-right: rem(52);
+  border: 1px solid rgba($main-blue, .1);
+  @include cf;
+}
+
+.mp-filter--list {
+  float: left;
+  height: rem(53);
+  list-style: none;
+
+  &::after {
+    @include cf;
+  }
+}
+
+.mp-filter--item {
+  float: left;
+}
+
+.mp-filter--item a {
+  display: block;
+  height: rem(53);
+  @include font(ubuntu);
+  font-size: rem(15);
+  color: $main-text-color;
+  line-height: rem(53);
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    display: inline-block;
+    height: rem(25);
+    margin-left: rem(33);
+    margin-right: rem(33);
+    vertical-align: middle;
+    border-right: 1px solid #c4c4c4;
+  }
+}
+
+.mp-filter--item:last-child a {
+
+  &::after {
+    display: none;
+  }
+}
+
+.mp-filter--view {
+  float: right;
+}
+
+.mp-filter--view a {
+  display: block;
+  float: left;
+  width: rem(24);
+  height: rem(24);
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+
+  &:first-child {
+    background-image: svg("row.min", "[fill]: #2190c1");;
+  }
+
+  &:last-child {
+    background-image: svg("grid.min", "[fill]: #2190c1");;
+  }
+}

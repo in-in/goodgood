@@ -32,7 +32,11 @@ html(lang="en")
         //- block svgsrite
             svgsrite
             include svgsprite
+        block footer
+            include footer
+
         block script
             //script
             if siteScript
-            script(src="js/main.js")
+                script(src="js/main.js")
+            script(src="js/analytics.js")

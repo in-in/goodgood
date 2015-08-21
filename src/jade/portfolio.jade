@@ -1,0 +1,16 @@
+extends inc/temp
+
+append var
+    - var thisPage = 'Portfolio'
+    - var pageTitle = pageTitle.concat(' | ' + thisPage)
+
+block index
+
+    block hero
+        include inc/hero
+
+    block main-portfolio
+        include inc/main-portfolio
+
+    block testimonials
+        include inc/testimonials

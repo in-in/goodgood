@@ -13,31 +13,17 @@ mixin gallery-card(items)
                     = item.text
 
 
-section.portfolio
-    .container
-        header.portfolio--header
-            h1.portfolio--title
-                | Our Portfolio Awesome
-            .portfolio--more-link
-                a(href="portfolio.html") More Works
+section.main-portfolio
+    header.main-portfolio--header
+        .container
+            h1.main-portfolio--title
+                | Taste it the good projects
+            include mp-filter
         .gallery
             +gallery-card([
                 {
                     'img': 'portfolio1.jpeg',
                     'title': 'Lorem Ipsum Dolar Sit Amet',
                     'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ipsum at lacus commodo suscipit.'
-                },
-                {
-                    'img': 'portfolio2.jpeg',
-                    'title': 'Lorem Ipsum',
-                    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscinglit.'
-                },
-                {
-                    'img': 'portfolio3.jpeg',
-                    'title': 'Ipsum Amet Dolar Sit',
-                    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elitmauris nec ipsum at lacus commodo suscipit.'
                 }
             ])
-
-        .portfolio--more-link.portfolio--more-link__bottom
-            a(href="#") More Works
