@@ -28,6 +28,12 @@ $gallery_susy: (
   gutter-position: after,
 );
 
+$works_susy: (
+  columns: 12,
+  gutters: 1/2.3,
+  gutter-position: after,
+);
+
 $feature_susy: (
   columns: 12,
   gutters: 3/1,
@@ -54,6 +60,7 @@ $footer_susy: (
   padding-left: rem(10);
 
   @include container();
+  outline: 1px dotted red;
 }
 
 

@@ -1,0 +1,79 @@
+.works {
+  width: 100%;
+  padding-top: rem(36);
+  @include cf;
+}
+
+.works--item {
+  background-color: hotpink;
+  @include gallery(4 of $works_susy);
+  margin-bottom: gutter($works_susy);
+
+  &:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
+
+.work {
+  width: rem(297);
+  height: rem(230);
+  border: 12px solid #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  outline: 1px dotted blue;
+}
+
+.work--inner {
+  position: relative;
+  top: -9999px;
+  left: -9999px;
+  width: 100%;
+  height: 100%;
+  padding: rem(40) rem(23);
+  background-color: rgba($dark-blue-bg,.6);
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.work:hover .work--inner {
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+.work--title {
+  margin-bottom: rem(19);
+  @include font(breeserif);
+  font-size: rem(20);
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.work--text {
+  margin-bottom: rem(30);
+  @include font(ubuntu);
+  font-size: rem(11);
+  color: #f1f1f1;
+}
+
+.work--details {
+  display: block;
+  box-sizing: border-box;
+  width: rem(144);
+  height: rem(41);
+  margin: 0 auto;
+  padding-left: 29.642857143%;
+  padding-right: 5.357142857%;
+  @include font(breeserif);
+  font-size: rem(17);
+  color: #f4f4f4;
+  line-height: rem(42);
+  background-image: svg("eye.min", '[fill]: #f4f4f4');
+  background-repeat: no-repeat;
+  background-position: 15.638297872% 50%;
+  background-size: 25% auto;
+  border: 1px solid #f8f8f8;
+  border-radius: 4px;
+  cursor: pointer;
+}

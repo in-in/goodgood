@@ -1,29 +1,8 @@
-mixin gallery-card(items)
-    each item in items
-        .gallery--item
-            .gallery-card
-                .gallery-card--pic
-                    img(src='img/' + item.img, alt='portfolio image')
-                    .gallery-card--details
-                        a(href="#")
-                            | Details
-                h4.gallery-card--title
-                    = item.title
-                p.gallery-card--text
-                    = item.text
-
-
 section.main-portfolio
     header.main-portfolio--header
         .container
             h1.main-portfolio--title
                 | Taste it the good projects
-            include mp-filter
-        .gallery
-            +gallery-card([
-                {
-                    'img': 'portfolio1.jpeg',
-                    'title': 'Lorem Ipsum Dolar Sit Amet',
-                    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ipsum at lacus commodo suscipit.'
-                }
-            ])
+    include mp-filter
+
+    include works
