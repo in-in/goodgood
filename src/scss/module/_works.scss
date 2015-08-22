@@ -5,7 +5,6 @@
 }
 
 .works--item {
-  background-color: hotpink;
   @include gallery(4 of $works_susy);
   margin-bottom: gutter($works_susy);
 
@@ -21,7 +20,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  outline: 1px dotted blue;
 }
 
 .work--inner {
@@ -72,7 +70,7 @@
   background-image: svg("eye.min", '[fill]: #f4f4f4');
   background-repeat: no-repeat;
   background-position: 15.638297872% 50%;
-  background-size: 25% auto;
+  background-size: rem(35) rem(23);
   border: 1px solid #f8f8f8;
   border-radius: 4px;
   cursor: pointer;
