@@ -1419,6 +1419,7 @@ input::-webkit-search-cancel-button {
 
 .main-portfolio--title {
   height: 8.375rem;
+  padding-top: 2.1875rem;
   font-family: "Oswald", san-serif;
   font-weight: 700;
   font-style: normal;
@@ -1426,17 +1427,38 @@ input::-webkit-search-cancel-button {
   color: #2190c1;
   text-align: center;
   text-transform: uppercase;
-  line-height: 8.375rem;
+}
+
+@media (max-width: 50em) {
+  .main-portfolio--title {
+    height: 7.75rem;
+    font-size: 3.25rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .main-portfolio--title {
+    height: 6.5rem;
+    font-size: 2.25rem;
+  }
 }
 
 .mp-filter {
-  width: 100%;
-  padding-left: 1.1875rem;
-  padding-right: 3.25rem;
+  width: calc(100% + 1.250rem);
+  margin-left: -0.625rem;
+  padding-left: 2.021276596%;
+  padding-right: 5.532%;
   border: 1px solid rgba(33, 144, 193, 0.1);
   display: table;
   content: "";
   clear: both;
+}
+
+@media (max-width: 50em) {
+  .mp-filter {
+    padding-left: 1%;
+    padding-right: 2%;
+  }
 }
 
 .mp-filter--list {
@@ -1478,6 +1500,25 @@ input::-webkit-search-cancel-button {
   margin-left: 2.0625rem;
   vertical-align: middle;
   border-right: 1px solid #c4c4c4;
+}
+
+@media (max-width: 50em) {
+  .mp-filter--item a {
+    padding-left: 0.9375rem;
+  }
+  .mp-filter--item a::after {
+    margin-left: 0.9375rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .mp-filter--item a {
+    padding-left: 0.625rem;
+    font-size: 0.8125rem;
+  }
+  .mp-filter--item a::after {
+    margin-left: 0.625rem;
+  }
 }
 
 .mp-filter--item:last-child a::after {
@@ -1555,6 +1596,30 @@ input::-webkit-search-cancel-button {
   margin-bottom: 0;
 }
 
+@media (max-width: 50em) {
+  .works--item {
+    width: 48.7046632124%;
+    float: left;
+  }
+  .works--item:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .works--item:nth-child(2n + 2) {
+    margin-left: 51.2953367876%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .works--item:nth-last-child(-n+3) {
+    margin-bottom: 2.5906735751%;
+  }
+  .works--item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+
 .work {
   width: 18.5625rem;
   height: 14.375rem;
@@ -1625,7 +1690,7 @@ input::-webkit-search-cancel-button {
 }
 
 .pager {
-  background-color: mediumpurple;
+  padding: 3.4375rem 0;
   text-align: center;
 }
 
@@ -1635,13 +1700,15 @@ input::-webkit-search-cancel-button {
 
 .pager--btn {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  height: 1.875rem;
+  margin: 0;
+  margin-right: 0.25rem;
+  padding: 0 0.5625rem;
   background-color: #aaa;
   font-family: "Ubuntu", san-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   color: #fefefe;
   border-radius: 0.25rem;
 }

@@ -15,6 +15,19 @@
   &:nth-last-child(-n+3) {
     margin-bottom: 0;
   }
+
+  @include breakpoint($medium) {
+
+    @include gallery(6 of $works_susy);
+
+    &:nth-last-child(-n+3) {
+      margin-bottom: gutter($works_susy);
+    }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .work {
@@ -84,7 +97,7 @@
 //pager
 
 .pager {
-  background-color: mediumpurple;
+  padding: rem(55) 0;
   text-align: center;
 }
 
@@ -94,11 +107,13 @@
 
 .pager--btn {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  height: rem(30);
+  margin: 0;
+  margin-right: rem(4);
+  padding: 0 rem(9);
   background-color: #aaa;
   @include font(ubuntu);
-  font-size: rem(20);
+  font-size: rem(17);
   color: #fefefe;
   border-radius: rem(4);
 

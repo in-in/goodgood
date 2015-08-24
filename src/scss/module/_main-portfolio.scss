@@ -4,10 +4,20 @@
 
 .main-portfolio--title {
   height: rem(134);
+  padding-top: rem(35);
   @include font(oswald, bold);
   font-size: rem(62);
   color: $main-blue;
   text-align: center;
   text-transform: uppercase;
-  line-height: rem(134);
+
+  @include breakpoint($medium) {
+    height: rem(124);
+    font-size: rem(52);
+  }
+
+  @include breakpoint($small) {
+    height: rem(104);
+    font-size: rem(36);
+  }
 }
