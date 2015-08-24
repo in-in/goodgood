@@ -1,3 +1,5 @@
+- var pager = true
+
 extends inc/temp
 
 append var
@@ -14,3 +16,6 @@ block index
 
     block testimonials
         include inc/testimonials
+    if pager
+        append script
+            script(src="js/pager.js")

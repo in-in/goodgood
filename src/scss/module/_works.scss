@@ -4,6 +4,10 @@
   @include cf;
 }
 
+.works--page {
+  width: 100%;
+}
+
 .works--item {
   @include gallery(4 of $works_susy);
   margin-bottom: gutter($works_susy);
@@ -74,4 +78,35 @@
   border: 1px solid #f8f8f8;
   border-radius: 4px;
   cursor: pointer;
+}
+
+
+//pager
+
+.pager {
+  background-color: mediumpurple;
+  text-align: center;
+}
+
+.pager--btn-group {
+  display: inline-block;
+}
+
+.pager--btn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #aaa;
+  @include font(ubuntu);
+  font-size: rem(20);
+  color: #fefefe;
+  border-radius: rem(4);
+
+  &:active {
+    background-color: darken(#aaa, 20%);
+  }
+  
+  &.is-selected {
+    background-color: $main-blue;
+  }
 }

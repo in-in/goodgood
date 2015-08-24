@@ -1522,6 +1522,10 @@ input::-webkit-search-cancel-button {
   clear: both;
 }
 
+.works--page {
+  width: 100%;
+}
+
 .works--item {
   width: 31.6062176166%;
   float: left;
@@ -1618,6 +1622,36 @@ input::-webkit-search-cancel-button {
   border: 1px solid #f8f8f8;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.pager {
+  background-color: mediumpurple;
+  text-align: center;
+}
+
+.pager--btn-group {
+  display: inline-block;
+}
+
+.pager--btn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #aaa;
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: #fefefe;
+  border-radius: 0.25rem;
+}
+
+.pager--btn:active {
+  background-color: #777777;
+}
+
+.pager--btn.is-selected {
+  background-color: #2190c1;
 }
 
 footer {
