@@ -57,11 +57,12 @@
   }
 
   @include breakpoint($small) {
-    padding-left: rem(10);
-    font-size: rem(13);
+    padding-left: rem(7);
+    font-size: rem(12);
 
     &::after {
-      margin-left: rem(10);
+      height: rem(20);
+      margin-left: rem(7);
     }
   }
 }

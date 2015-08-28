@@ -222,15 +222,25 @@ module.exports = function (grunt) {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true
         },
-        files: {
-          'build/index.html': 'build/index.html'
-        }
+        files: [{
+          expand: true,
+          cwd: 'build/',
+          src: ['*.html'],
+          dest: 'build/',
+          ext: '.html'
+        }]
       }
     },
 
     uglify: {
       build: {
-        files: {'build/js/main.js': 'build/js/main.js'}
+        files: [{
+          expand: true,
+          cwd: 'build/js',
+          src: ['*.js'],
+          dest: 'build/js',
+          ext: '.js'
+        }]
       }
     },
 

@@ -6,6 +6,14 @@
   }
   width: 100%;
   height: rem(293);
+
+  @include breakpoint($medium) {
+    height: rem(273);
+  }
+
+  @include breakpoint($small) {
+    height: rem(250);
+  }
 }
 
 .hero--title {
@@ -15,4 +23,12 @@
   color: $slider-text-color;
   text-align: center;
   text-transform: uppercase;
+
+  @include breakpoint($medium) {
+    font-size: rem(52);
+  }
+
+  @include breakpoint($small) {
+    font-size: rem(42);
+  }
 }

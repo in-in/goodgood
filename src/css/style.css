@@ -1403,6 +1403,18 @@ input::-webkit-search-cancel-button {
   height: 18.3125rem;
 }
 
+@media (max-width: 50em) {
+  .hero {
+    height: 17.0625rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .hero {
+    height: 15.625rem;
+  }
+}
+
 .hero--title {
   position: relative;
   top: 50%;
@@ -1415,6 +1427,18 @@ input::-webkit-search-cancel-button {
   color: #cccece;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (max-width: 50em) {
+  .hero--title {
+    font-size: 3.25rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .hero--title {
+    font-size: 2.625rem;
+  }
 }
 
 .main-portfolio--title {
@@ -1513,11 +1537,12 @@ input::-webkit-search-cancel-button {
 
 @media (max-width: 40em) {
   .mp-filter--item a {
-    padding-left: 0.625rem;
-    font-size: 0.8125rem;
+    padding-left: 0.4375rem;
+    font-size: 0.75rem;
   }
   .mp-filter--item a::after {
-    margin-left: 0.625rem;
+    height: 1.25rem;
+    margin-left: 0.4375rem;
   }
 }
 
@@ -1620,6 +1645,19 @@ input::-webkit-search-cancel-button {
   }
 }
 
+@media (max-width: 40em) {
+  .works--item {
+    width: 100%;
+    float: left;
+    float: none;
+  }
+  .works--item:nth-child(1n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+
 .work {
   width: 18.5625rem;
   height: 14.375rem;
@@ -1627,6 +1665,12 @@ input::-webkit-search-cancel-button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 50em) {
+  .work {
+    margin: 0 auto;
+  }
 }
 
 .work--inner {
