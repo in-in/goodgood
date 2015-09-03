@@ -57,7 +57,7 @@
     <section class="top-slider">
       <div class="slider">
             <div class="slider--item slide">
-              <div class="slide--img"><img src="http://lorempixel.com/1280/490/abstract/9/" data-flickity-lazyload="img/slider-img4.jpg" alt="image"></div>
+              <div class="slide--img"><img data-flickity-lazyload="img/slider-img4.jpg" alt="image"></div>
               <div class="container">
                 <div class="slide--inner">
                   <div class="slide--content">
@@ -68,7 +68,7 @@
               </div>
             </div>
             <div class="slider--item slide">
-              <div class="slide--img"><img src="http://lorempixel.com/1280/490/abstract/9/" data-flickity-lazyload="img/slider-img2.jpg" alt="image"></div>
+              <div class="slide--img"><img data-flickity-lazyload="img/slider-img2.jpg" alt="image"></div>
               <div class="container">
                 <div class="slide--inner">
                   <div class="slide--content">
@@ -79,7 +79,7 @@
               </div>
             </div>
             <div class="slider--item slide">
-              <div class="slide--img"><img src="http://lorempixel.com/1280/490/abstract/9/" data-flickity-lazyload="img/slider-img3.jpg" alt="image"></div>
+              <div class="slide--img"><img data-flickity-lazyload="img/slider-img3.jpg" alt="image"></div>
               <div class="container">
                 <div class="slide--inner">
                   <div class="slide--content">
@@ -90,7 +90,7 @@
               </div>
             </div>
             <div class="slider--item slide">
-              <div class="slide--img"><img src="http://lorempixel.com/1280/490/abstract/9/" data-flickity-lazyload="img/slider-img1.jpg" alt="image"></div>
+              <div class="slide--img"><img data-flickity-lazyload="img/slider-img1.jpg" alt="image"></div>
               <div class="container">
                 <div class="slide--inner">
                   <div class="slide--content">
@@ -101,7 +101,7 @@
               </div>
             </div>
             <div class="slider--item slide">
-              <div class="slide--img"><img src="http://lorempixel.com/1280/490/abstract/9/" data-flickity-lazyload="img/slider-img5.jpg" alt="image"></div>
+              <div class="slide--img"><img data-flickity-lazyload="img/slider-img5.jpg" alt="image"></div>
               <div class="container">
                 <div class="slide--inner">
                   <div class="slide--content">
@@ -313,7 +313,17 @@
       </div>
     </footer>
     <!--script-->
-    <script src="js/main.js"></script>
-    <script src="js/analytics.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js"></script>
+    <script>
+      var elem = document.querySelector('.slider');
+      var flkty = new Flickity(elem, {
+          cellAlign: 'center',
+          contain: true,
+          prevNextButtons: false,
+          lazyLoad: true,
+          initialIndex: 3
+      });
+    </script>
+    <!--script(src="js/analytics.js")-->
   </body>
 </html>

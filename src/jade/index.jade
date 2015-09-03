@@ -22,3 +22,15 @@ block index
         .spacer
     block testimonials
         include inc/testimonials
+            
+prepend script
+    script(src='//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js')
+    script.
+        var elem = document.querySelector('.slider');
+        var flkty = new Flickity(elem, {
+            cellAlign: 'center',
+            contain: true,
+            prevNextButtons: false,
+            lazyLoad: true,
+            initialIndex: 3
+        });

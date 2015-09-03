@@ -1,6 +1,6 @@
 mixin slider(items)
     each item in items
-        - var atts = {'src': 'http://lorempixel.com/1280/490/abstract/9/','data-flickity-lazyload': item.img,'alt': 'image'}
+        - var atts = {'data-flickity-lazyload': item.img,'alt': 'image'}
         .slider--item.slide
             .slide--img
                 img&attributes(atts)

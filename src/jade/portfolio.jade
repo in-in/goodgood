@@ -1,10 +1,9 @@
-- var pager = true
-
 extends inc/temp
 
 append var
     - var thisPage = 'Portfolio'
     - var pageTitle = pageTitle.concat(' | ' + thisPage)
+    - var jquery = true
 
 block index
 
@@ -16,6 +15,10 @@ block index
 
     block testimonials
         include inc/testimonials
-    if pager
-        append script
-            script(src="js/pager.js")
+
+prepend script
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js')
+    script(src="js/works.js")
+    script(src="js/person-slider.js")

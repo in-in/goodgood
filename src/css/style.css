@@ -1500,7 +1500,7 @@ input::-webkit-search-cancel-button {
   float: left;
 }
 
-.mp-filter--item a {
+.mp-filter--item {
   display: block;
   height: 3.3125rem;
   padding-left: 2.0625rem;
@@ -1511,13 +1511,14 @@ input::-webkit-search-cancel-button {
   color: #515862;
   line-height: 3.3125rem;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.mp-filter--item a:hover {
+.mp-filter--item:hover {
   color: #2190c1;
 }
 
-.mp-filter--item a::after {
+.mp-filter--item::after {
   content: '';
   display: inline-block;
   height: 1.5625rem;
@@ -1527,30 +1528,30 @@ input::-webkit-search-cancel-button {
 }
 
 @media (max-width: 50em) {
-  .mp-filter--item a {
+  .mp-filter--item {
     padding-left: 0.9375rem;
   }
-  .mp-filter--item a::after {
+  .mp-filter--item::after {
     margin-left: 0.9375rem;
   }
 }
 
 @media (max-width: 40em) {
-  .mp-filter--item a {
+  .mp-filter--item {
     padding-left: 0.4375rem;
     font-size: 0.75rem;
   }
-  .mp-filter--item a::after {
+  .mp-filter--item::after {
     height: 1.25rem;
     margin-left: 0.4375rem;
   }
 }
 
-.mp-filter--item:last-child a::after {
+.mp-filter--item:last-child::after {
   display: none;
 }
 
-.mp-filter--item__active a {
+.mp-filter--item.is-active {
   color: #2190c1;
 }
 
@@ -1586,35 +1587,11 @@ input::-webkit-search-cancel-button {
   display: table;
   content: "";
   clear: both;
-}
-
-.works--page {
-  width: 100%;
+  background-color: palegreen;
 }
 
 .works--item {
-  width: 31.6062176166%;
-  float: left;
-  margin-bottom: 2.5906735751%;
-}
-
-.works--item:nth-child(3n + 1) {
-  margin-left: 0;
-  margin-right: -100%;
-  clear: both;
-  margin-left: 0;
-}
-
-.works--item:nth-child(3n + 2) {
-  margin-left: 34.1968911917%;
-  margin-right: -100%;
-  clear: none;
-}
-
-.works--item:nth-child(3n + 3) {
-  margin-left: 68.3937823834%;
-  margin-right: -100%;
-  clear: none;
+  background-color: hotpink;
 }
 
 .works--item:nth-last-child(-n+3) {
@@ -1761,7 +1738,7 @@ input::-webkit-search-cancel-button {
   background-color: #777777;
 }
 
-.pager--btn.is-selected {
+.pager--btn.is-active {
   background-color: #2190c1;
 }
 

@@ -3,16 +3,16 @@
 .container
     .mp-filter
         ul.mp-filter--list
-            li.mp-filter--item.mp-filter--item__active
-                a(href="#") all
-            li.mp-filter--item
-                a(href="#") web design
-            li.mp-filter--item
-                a(href="#") advertising
-            li.mp-filter--item
-                a(href="#") identity
-            li.mp-filter--item
-                a(href="#") illustration
+            li(data-filter="*").mp-filter--item.is-active
+                | all
+            li(data-filter=".category-web").mp-filter--item
+                | web design
+            li(data-filter=".category-ad").mp-filter--item
+                | advertising
+            li(data-filter=".category-identity").mp-filter--item
+                | identity
+            li(data-filter=".category-illustration").mp-filter--item
+                | illustration
         .mp-filter--view
             svg#js-row.mp-filter--icon
                 use(xlink:href="#icon-row")

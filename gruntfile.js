@@ -68,7 +68,7 @@ module.exports = function (grunt) {
           separator: ';\n'
         },
         src: [
-          'node_modules/flickity/dist/flickity.pkgd.js',
+          //'node_modules/flickity/dist/flickity.pkgd.js',
           'src/js/dev/*.js'
         ],
         dest: 'src/js/main.js'

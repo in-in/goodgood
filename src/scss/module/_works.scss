@@ -2,15 +2,13 @@
   width: 100%;
   padding-top: rem(36);
   @include cf;
-}
-
-.works--page {
-  width: 100%;
+  background-color: palegreen;
 }
 
 .works--item {
-  @include gallery(4 of $works_susy);
-  margin-bottom: gutter($works_susy);
+  //@include gallery(4 of $works_susy);
+  //margin-bottom: gutter($works_susy);
+  background-color: hotpink;
 
   &:nth-last-child(-n+3) {
     margin-bottom: 0;
@@ -130,7 +128,7 @@
     background-color: darken(#aaa, 20%);
   }
   
-  &.is-selected {
+  &.is-active {
     background-color: $main-blue;
   }
 }

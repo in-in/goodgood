@@ -25,7 +25,7 @@
   float: left;
 }
 
-.mp-filter--item a {
+.mp-filter--item {
   display: block;
   height: rem(53);
   padding-left: rem(33);
@@ -34,6 +34,7 @@
   color: $main-text-color;
   line-height: rem(53);
   text-transform: uppercase;
+  cursor: pointer;
   
   &:hover {
     color: $main-blue;
@@ -67,14 +68,14 @@
   }
 }
 
-.mp-filter--item:last-child a {
+.mp-filter--item:last-child {
 
   &::after {
     display: none;
   }
 }
 
-.mp-filter--item__active a {
+.mp-filter--item.is-active {
   color: $main-blue;
 }
 
