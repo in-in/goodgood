@@ -2,41 +2,71 @@
   width: 100%;
   padding-top: rem(36);
   @include cf;
-  background-color: palegreen;
 }
 
 .works--item {
-  //@include gallery(4 of $works_susy);
-  //margin-bottom: gutter($works_susy);
-  background-color: hotpink;
-
-  &:nth-last-child(-n+3) {
-    margin-bottom: 0;
-  }
+  width: 33.33%;
+  margin-bottom: 1rem;
 
   @include breakpoint($medium) {
-
-    @include gallery(6 of $works_susy);
-
-    &:nth-last-child(-n+3) {
-      margin-bottom: gutter($works_susy);
-    }
-
-    &:nth-last-child(-n+2) {
-      margin-bottom: 0;
-    }
+    width: 50%;
   }
 
   @include breakpoint($small) {
-    @include gallery(12 of $works_susy);
-    float: none;
+    width: 100%;
+  }
+}
+
+.works--item.works--item__row {
+  width: 100%;
+  margin-bottom: .5rem;
+  border: rem(6) solid white;
+
+  .work {
+    float: left;
+    width: rem(180);
+    height: rem(139);
+    margin: 0;
+    border: 0;
+
+    @include breakpoint($small) {
+      margin-top: 3%;
+    }
+
+    .work--inner {
+      display: none;
+    }
+  }
+
+  .work--inner__row {
+    display: block;
+    height: rem(139);
+    padding-top: rem(10);
+    padding-left: rem(200);
+    padding-right: rem(20);
+
+    @include breakpoint($small) {
+      height: 100%;
+    }
+    
+    .work--title {
+      font-size: rem(22);
+      color: $main-text-color;
+    }
+
+    .work--text {
+      font-size: rem(13);
+      line-height: 1.3;
+      color: $main-text-color;
+    }
   }
 }
 
 .work {
   width: rem(297);
   height: rem(230);
-  border: 12px solid #fff;
+  margin: 0 auto;
+  border: rem(12) solid #fff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -72,6 +102,10 @@
   text-align: center;
 }
 
+.work--inner__row {
+  display: none;
+}
+
 .work--text {
   margin-bottom: rem(30);
   @include font(ubuntu);
@@ -104,12 +138,12 @@
 //pager
 
 .pager {
-  padding: rem(55) 0;
-  text-align: center;
+  padding: rem(40) 0;
 }
 
-.pager--btn-group {
-  display: inline-block;
+.pager--row .mp-filter--list {
+  width: 100%;
+  text-align: center;
 }
 
 .pager--btn {
@@ -122,6 +156,7 @@
   @include font(ubuntu);
   font-size: rem(17);
   color: #fefefe;
+  line-height: rem(30);
   border-radius: rem(4);
 
   &:active {

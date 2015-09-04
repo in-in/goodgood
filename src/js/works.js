@@ -9,14 +9,14 @@ $( function() {
   $('#js-row').click( function() {
     $('.mp-filter--icon').removeClass('mp-filter--icon__active');
     $(this).addClass('mp-filter--icon__active');
-    $('.works--item').addClass('works-row');
+    $('.works--item').addClass('works--item__row');
     $grid.isotope({layoutMode: 'vertical'});
   });
 
   $('#js-grid').click( function() {
     $('.mp-filter--icon').removeClass('mp-filter--icon__active');
     $(this).addClass('mp-filter--icon__active');
-    $('.works--item').removeClass('works-row');
+    $('.works--item').removeClass('works--item__row');
     $grid.isotope({layoutMode: 'fitRows'});
   });
 

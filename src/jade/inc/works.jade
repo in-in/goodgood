@@ -8,6 +8,13 @@ mixin work(items)
                     p.work--text
                         = item.text
                     a(href="#").work--details| Details
+            .work--inner__row
+                h4.work--title
+                    = item.title
+                p.work--text
+                    = item.text + item.text + item.text
+                    span.card--details
+                        a(href="#")  Details...
 
 .container
     .works
@@ -165,7 +172,7 @@ mixin work(items)
         ])
     .pager
         .pager--row
-            .pager--btn-group.mp-filter--list
-                li(data-filter=".page1").pager--btn 1
+            .mp-filter--list
+                li(data-filter=".page1").pager--btn.is-active 1
                 li(data-filter=".page2").pager--btn 2
                 li(data-filter=".page3").pager--btn 3
