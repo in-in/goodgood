@@ -2,7 +2,7 @@
 
 .container
     .mp-filter
-        ul.mp-filter--list
+        ul.mp-filter--list.js-filter-btn
             li(data-filter="*").mp-filter--item.is-active
                 | all
             li(data-filter=".category-web").mp-filter--item
@@ -13,6 +13,13 @@
                 | identity
             li(data-filter=".category-illustration").mp-filter--item
                 | illustration
+        select.mp-filter--select#js-filter-select
+            option(value='*') All
+            option(value='.category-web') web design
+            option(value='.category-ad') advertising
+            option(value='.category-identity') identity
+            option(value='.category-illustration') illustration
+
         .mp-filter--view
             svg#js-row.mp-filter--icon
                 use(xlink:href="#icon-row")

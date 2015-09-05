@@ -20,16 +20,23 @@ $( function() {
     $grid.isotope({layoutMode: 'fitRows'});
   });
 
-  $('.mp-filter--list').on( 'click', 'li', function() {
+  $('.js-filter-btn').on( 'click', 'li', function() {
     var filterValue = $( this ).attr('data-filter');
     $grid.isotope({ filter: filterValue });
   });
 
-  $('.mp-filter--list').each( function( i, buttonGroup ) {
+  $('.js-filter-btn').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );
     $buttonGroup.on( 'click', 'li', function() {
       $buttonGroup.find('.is-active').removeClass('is-active');
       $( this ).addClass('is-active');
     });
   });
+
+  // bind filter on select change
+  $('#js-filter-select').on( 'change', function() {
+    var filterValue = this.value;
+    $grid.isotope({ filter: filterValue });
+  });
+
 });

@@ -52,6 +52,7 @@
     .work--title {
       font-size: rem(22);
       color: $main-text-color;
+      text-align: left;
     }
 
     .work--text {
@@ -134,14 +135,13 @@
   cursor: pointer;
 }
 
-
 //pager
 
 .pager {
   padding: rem(40) 0;
 }
 
-.pager--row .mp-filter--list {
+.pager--row {
   width: 100%;
   text-align: center;
 }

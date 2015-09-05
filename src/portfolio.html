@@ -67,13 +67,20 @@
       </header>
       <div class="container">
         <div class="mp-filter">
-          <ul class="mp-filter--list">
+          <ul class="mp-filter--list js-filter-btn">
             <li data-filter="*" class="mp-filter--item is-active">all</li>
             <li data-filter=".category-web" class="mp-filter--item">web design</li>
             <li data-filter=".category-ad" class="mp-filter--item">advertising</li>
             <li data-filter=".category-identity" class="mp-filter--item">identity</li>
             <li data-filter=".category-illustration" class="mp-filter--item">illustration</li>
           </ul>
+          <select id="js-filter-select" class="mp-filter--select">
+            <option value="*">All</option>
+            <option value=".category-web">web design</option>
+            <option value=".category-ad">advertising</option>
+            <option value=".category-identity">identity</option>
+            <option value=".category-illustration">illustration</option>
+          </select>
           <div class="mp-filter--view">
             <svg id="js-row" class="mp-filter--icon">
               <use xlink:href="#icon-row"></use>
@@ -489,7 +496,7 @@
         </div>
         <div class="pager">
           <div class="pager--row">
-            <div class="mp-filter--list">
+            <div class="mp-filter--pager js-filter-btn">
               <li data-filter=".page1" class="pager--btn is-active">1</li>
               <li data-filter=".page2" class="pager--btn">2</li>
               <li data-filter=".page3" class="pager--btn">3</li>

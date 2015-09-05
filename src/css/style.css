@@ -1480,7 +1480,7 @@ input::-webkit-search-cancel-button {
 
 @media (max-width: 50em) {
   .mp-filter {
-    padding-left: 1%;
+    padding-left: 2%;
     padding-right: 2%;
   }
 }
@@ -1494,6 +1494,12 @@ input::-webkit-search-cancel-button {
   display: table;
   content: "";
   clear: both;
+}
+
+@media (max-width: 40em) {
+  .mp-filter--list {
+    display: none;
+  }
 }
 
 .mp-filter--item {
@@ -1581,6 +1587,28 @@ input::-webkit-search-cancel-button {
   fill: #2190c1;
 }
 
+.mp-filter--select {
+  display: none;
+  height: 1.5625rem;
+  margin-top: 0.9375rem;
+  vertical-align: middle;
+  font-family: "Ubuntu", san-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  color: #515862;
+  text-transform: uppercase;
+  line-height: 1.5625rem;
+  background: #f4f4f4;
+  border-color: #2190c1;
+}
+
+@media (max-width: 40em) {
+  .mp-filter--select {
+    display: inline-block;
+  }
+}
+
 .works {
   width: 100%;
   padding-top: 2.25rem;
@@ -1647,6 +1675,7 @@ input::-webkit-search-cancel-button {
 .works--item.works--item__row .work--inner__row .work--title {
   font-size: 1.375rem;
   color: #515862;
+  text-align: left;
 }
 
 .works--item.works--item__row .work--inner__row .work--text {
@@ -1739,7 +1768,7 @@ input::-webkit-search-cancel-button {
   padding: 2.5rem 0;
 }
 
-.pager--row .mp-filter--list {
+.pager--row {
   width: 100%;
   text-align: center;
 }
@@ -1888,9 +1917,14 @@ footer {
     margin-left: 0;
     margin-right: 0;
     margin-left: 0;
+    text-align: center;
   }
   .footer-col:nth-child(4) .footer-col--title {
     text-align: center;
+  }
+  .footer-col:nth-child(4) .contact-item {
+    display: inline-block;
+    margin-right: 1.25rem;
   }
 }
 

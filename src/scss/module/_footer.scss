@@ -70,9 +70,15 @@ footer {
   @include breakpoint($medium) {
     @include span (12 of $feature_susy);
     margin-left: 0;
+    text-align: center;
 
     .footer-col--title {
       text-align: center;
+    }
+    
+    .contact-item {
+      display: inline-block;
+      margin-right: rem(20);
     }
   }
 }

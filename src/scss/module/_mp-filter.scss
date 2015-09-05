@@ -7,7 +7,7 @@
   @include cf;
 
   @include breakpoint($medium) {
-    padding-left: 1%;
+    padding-left: 2%;
     padding-right: 2%;
   }
 }
@@ -18,6 +18,10 @@
 
   &::after {
     @include cf;
+  }
+
+  @include breakpoint($small) {
+    display: none;
   }
 }
 
@@ -100,4 +104,24 @@
 
 .mp-filter--icon__active {
   fill: $main-blue;
+}
+
+//select
+
+.mp-filter--select {
+  display: none;
+  height: rem(25);
+  margin-top: rem(15);
+  vertical-align: middle;
+  @include font(ubuntu);
+  font-size: rem(15);
+  color: $main-text-color;
+  text-transform: uppercase;
+  line-height: rem(25);
+  background: #f4f4f4;
+  border-color: $main-blue;
+
+  @include breakpoint($small) {
+    display: inline-block;
+  }
 }
