@@ -1808,7 +1808,7 @@ input::-webkit-search-cancel-button {
 }
 
 .clients {
-  height: 9.0625rem;
+  min-height: 9.0625rem;
   padding-top: 1.5625rem;
   border-top: 1px solid rgba(33, 144, 193, 0.1);
   border-bottom: 1px solid rgba(33, 144, 193, 0.1);
@@ -1824,6 +1824,7 @@ input::-webkit-search-cancel-button {
   width: 8.125rem;
   height: 1.6875rem;
   margin-right: 2.7%;
+  margin-bottom: 1.875rem;
   background-repeat: no-repeat;
   background-position: center;
 }

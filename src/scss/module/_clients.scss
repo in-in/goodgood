@@ -1,5 +1,5 @@
 .clients {
-  height: rem(145);
+  min-height: rem(145);
   padding-top: rem(25);
   border-top: 1px solid rgba($main-blue, .1);
   border-bottom: 1px solid rgba($main-blue, .1);
@@ -15,6 +15,7 @@
   width: rem(130);
   height: rem(27);
   margin-right: 2.7%;
+  margin-bottom: rem(30);
   background: {
     repeat: no-repeat;
     position: center;
