@@ -1,0 +1,47 @@
+.clients {
+  height: rem(145);
+  padding-top: rem(25);
+  border-top: 1px solid rgba($main-blue, .1);
+  border-bottom: 1px solid rgba($main-blue, .1);
+}
+
+.clients__list {
+  padding-top: rem(30);
+  text-align: center;
+}
+
+.clients-logo {
+  display: inline-block;
+  width: rem(130);
+  height: rem(27);
+  margin-right: 2.7%;
+  background: {
+    repeat: no-repeat;
+    position: center;
+  }
+}
+
+.clients-logo:nth-child(1){
+  background-image: url(../img/clients-pic-1.png);
+}
+
+.clients-logo:nth-child(2){
+  background-image: url(../img/clients-pic-2.png);
+}
+
+.clients-logo:nth-child(3){
+  background-image: url(../img/clients-pic-3.png);
+}
+
+.clients-logo:nth-child(4){
+  background-image: url(../img/clients-pic-4.png);
+}
+
+.clients-logo:nth-child(5){
+  background-image: url(../img/clients-pic-5.png);
+}
+
+.clients-logo:nth-child(6){
+  background-image: url(../img/clients-pic-6.png);
+  margin-right: 0;
+}

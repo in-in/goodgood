@@ -1,9 +1,11 @@
 .mp-filter {
-  width: calc(100% + 1.250rem);
-  margin-left: rem(-10);
-  padding-left: 2.021276596%;
-  padding-right: 5.532%;
-  border: 1px solid rgba($main-blue, .1);
+  //width: calc(100% + 1.250rem);
+  width: 100%;
+  //margin-left: rem(-10);
+  padding-left: 2%;
+  padding-right: 2%;
+  border-top: 1px solid rgba($main-blue, .1);
+  border-bottom: 1px solid rgba($main-blue, .1);
   @include cf;
 
   @include breakpoint($medium) {

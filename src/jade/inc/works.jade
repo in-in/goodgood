@@ -12,7 +12,7 @@ mixin work(items)
                 h4.work--title
                     = item.title
                 p.work--text
-                    = item.text + item.text + item.text
+                    = new Array(4).join(item.text)
                     span.card--details
                         a(href="#")  Details...
 
