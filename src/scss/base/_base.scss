@@ -13,11 +13,3 @@ body {
   margin: 0 -1rem;
   border-bottom: 1px solid #d9d9d9;
 }
-
-.section-title {
-  @include font(oswald, bold);
-  font-size: rem(27);
-  color: $main-blue;
-  text-transform: uppercase;
-  text-align: center;
-}

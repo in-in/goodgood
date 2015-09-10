@@ -1,0 +1,16 @@
+.section-title {
+  @include font(oswald, bold);
+  color: $main-blue;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-title--m {
+  font-size: rem(30); //40px
+}
+
+.section-title--s {
+  font-size: rem(27);
+}
+
+

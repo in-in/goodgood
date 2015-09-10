@@ -17,14 +17,17 @@ block index
 
     block features
         include inc/features
+
     block spacer
     .container
         .spacer
+
     block testimonials
         include inc/testimonials
             
 prepend script
     script(src='//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.1/flickity.pkgd.min.js')
+    script(src="js/person-slider.js")
     script.
         var elem = document.querySelector('.slider');
         var flkty = new Flickity(elem, {

@@ -8,16 +8,9 @@
   text-align: center;
 }
 
-.features--title {
-  margin-bottom: rem(23);
-  @include font(oswald, bold);
-  font-size: rem(40);
-  color: $main-blue;
-  text-transform: uppercase;
-}
-
 .features--subtitle {
   padding: 0 12.5%;
+  padding-top: rem(23);
   @include font(ubuntu);
   font-size: rem(12);
   color: $main-text-color;
