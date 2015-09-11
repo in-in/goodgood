@@ -1,0 +1,31 @@
+.mission__wrap {
+  padding-top: 3.191489362%; //30px
+  padding-bottom: 3.510638298%; //33px;
+}
+
+.mission-description {
+  width: 96.595744681%;
+  margin: 0 auto;
+  padding-top: 2.202643172%; //20px
+}
+
+.mission-text {
+  @include font(ubuntu);
+  font-size: rem(13);
+  text-align: center;
+  line-height: 1.5;
+  
+  &:first-child {
+    padding-bottom: 2.202643172%; //20px
+  }
+}
+
+.mission-text--b {
+  @include font(ubuntu, bold);
+}
+
+.mission-tagline {
+  padding-top: 2.643171806%; //24px
+
+}
+

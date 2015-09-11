@@ -1,23 +1,4 @@
-.main-portfolio {
-
-}
-
-.main-portfolio--title {
-  height: rem(134);
-  padding-top: rem(35);
-  @include font(oswald, bold);
-  font-size: rem(62);
-  color: $main-blue;
-  text-align: center;
-  text-transform: uppercase;
-
-  @include breakpoint($medium) {
-    height: rem(124);
-    font-size: rem(52);
-  }
-
-  @include breakpoint($small) {
-    height: rem(104);
-    font-size: rem(36);
-  }
+.main-portfolio--header {
+  padding-top: 2.659574468%; //25px
+  padding-bottom: 3.085106383%; //29px
 }

@@ -91,7 +91,6 @@ module.exports = function (grunt) {
           injectChanges: true,
           open: true,
           ui: false,
-          reloadDelay: 200,
           browser: "chromium-browser",
           server: {
             baseDir: "src"
