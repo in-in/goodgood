@@ -1,13 +1,12 @@
-.services {
-  padding-bottom: rem(30);
+.services__wrap {
+  padding-bottom: 1.276595745%; //12
 }
 
-.services--title {
+.services__title {
   position: relative;
   width: rem(144);
   height: rem(35);
   margin-top: rem(-15);
-  margin-bottom: rem(30);
   margin-left: auto;
   margin-right: auto;
   @include font(oswald, bold);
@@ -21,71 +20,29 @@
   z-index: 3;
 }
 
-.services--list {
-  @include container();
+.services__list {
+  padding-top: 1.063829787%; //10
+  text-align: center;
 }
 
-.card {
-  @extend %list-item;
-  @include pad(1/5);
-}
-
-.card--icon {
+.services__img {
   width: rem(118);
   height: rem(118);
-  margin: 0 auto;
-  margin-bottom: rem(22);
-  background: {
-    image: url(../img/services_img.png);
-    repeat: no-repeat;
-    position: 0 0;
-  }
-  @include breakpoint($medium) {
-    width: rem(100);
-    height: rem(100);
-    background-size: cover;
-  }
+  background-repeat: no-repeat;
 }
 
-.card:nth-of-type(2) .card--icon{
+.features-item:nth-of-type(2) .services__img{
   background-position: -118px 0;
-  @include breakpoint($medium) {
-    background-position: -100px 0;
-  }
 }
 
-.card:nth-of-type(3) .card--icon{
+.features-item:nth-of-type(3) .services__img {
   background-position: -236px 0;
-  @include breakpoint($medium) {
-    background-position: -200px 0;
-  }
 }
 
-.card:nth-of-type(4) .card--icon{
+.features-item:nth-of-type(4) .services__img {
   background-position: -354px 0;
-  @include breakpoint($medium) {
-    background-position: -300px 0;
-  }
 }
 
-.card--title {
-  margin-bottom: rem(10);
-  @include font(breeserif);
-  font-size: rem(16.5);
-  color: $main-text-color;
-  text-align: center;
-
-}
-
-.card--text {
-  @include font(ubuntu);
-  font-size: rem(11);
-  color: $main-text-color;
-  line-height: rem(15);
-  text-align: center;
-}
-
-.card--details a {
-  color: $details-link;
-  @include font(ubuntu, bold);
+.services__text {
+  padding: 0 12.195121951%; //25
 }

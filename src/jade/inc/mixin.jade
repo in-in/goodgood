@@ -40,3 +40,31 @@ mixin favicon(path)
     meta(name="msapplication-TileColor", content="#da532c")
     meta(name="msapplication-TileImage", content="#{path}/mstile-144x144.png")
     meta(name="theme-color", content="#ffffff")
+
+
+mixin features(items)
+    each item in items
+        .features-item
+
+            if item.img
+                if item.imgClass
+                    .features-item__img(style='background-image: url(/img/#{item.img})',
+                    class= item.imgClass)
+                else
+                    .features-item__img(style='background-image: url(/img/#{item.img})')
+
+            if item.title
+                h4.features-item__title
+                    = item.title
+
+            if item.text
+                if item.textClass
+                    p.features-item__text(class= item.textClass)
+                        = item.text
+                        span.link-details
+                            a(href="#")|  Details...
+                else
+                    p.features-item__text
+                        = item.text
+                        span.link-details
+                            a(href="#")|  Details...

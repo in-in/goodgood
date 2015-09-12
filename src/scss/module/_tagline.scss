@@ -7,11 +7,11 @@
   text-transform: uppercase;
 
   @include breakpoint($medium) {
-    font-size: rem(53);
+    font-size: calc(3.875rem - 17%);
   }
 
   @include breakpoint($small) {
-    font-size: rem(45);
+    font-size: calc(3.705rem - 20%);
   }
 }
 

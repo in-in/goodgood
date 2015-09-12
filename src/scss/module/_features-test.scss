@@ -1,0 +1,32 @@
+.features-item {
+  display: inline-block;
+  min-width: rem(200);
+  width: 25%;
+  margin-right: -4px;
+  padding: 2.127659574% 1.595744681%; //20 15
+}
+
+.features-item__img {
+  margin: 0 auto;
+  margin-bottom: 9.756097561%; //20
+}
+
+.features-item__title {
+  margin-bottom: 5.853658537%; //12
+  @include font(breeserif);
+  font-size: rem(17);
+  color: $main-text-color;
+  text-align: center;
+}
+
+.features-item__text {
+  @include font(ubuntu);
+  font-size: rem(11);
+  color: $main-text-color;
+  line-height: 1.4;
+}
+
+.link-details a {
+  @include font(ubuntu, bold);
+  color: $details-link;
+}

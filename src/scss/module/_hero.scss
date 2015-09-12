@@ -9,27 +9,23 @@
   height: rem(293);
 
   @include breakpoint($medium) {
-    height: rem(273);
+    height: rem(243);
   }
 
   @include breakpoint($small) {
-    height: rem(250);
+    display: none;
   }
 }
 
 .hero--title {
   @include vert-center;
   @include font(oswald, bold);
-  font-size: rem(62);
+  font-size: rem(59);
   color: $slider-text-color;
   text-align: center;
   text-transform: uppercase;
 
   @include breakpoint($medium) {
-    font-size: rem(52);
-  }
-
-  @include breakpoint($small) {
-    font-size: rem(42);
+    font-size: rem(49);
   }
 }

@@ -1,34 +1,41 @@
-mixin card(items)
-    each item in items
-        .card
-            .card--icon
-            h4.card--title
-                = item.title
-            p.card--text
-                = item.text
-                span.card--details
-                    a(href="#")|  Details...
-
 section.services
     .container
-        h2.services--title
-            | Our services
-        .services--list
-            +card([
-                {
-                    'title': 'Web Design',
-                    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ipsum at lacus commodo suscipit.'
-                },
-                {
-                    'title': 'Search Optimization',
-                    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ipsum at lacus commodo suscipit.'
-                },
-                {
-                    'title': 'Online Shop',
-                    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ipsum at lacus commodo suscipit.'
-                },
-                {
-                    'title': 'Social Media',
-                    'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ipsum at lacus commodo suscipit.'
-                }
-            ])
+        .services__wrap
+            h2.services__title
+                | Our services
+
+            .services__list
+                +features([
+                    {
+                        'img': 'services_img.png',
+                        'imgClass': 'services__img',
+                        'title': 'Web Design',
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ' +
+                        'ipsum at lacus commodo suscipit.',
+                        'textClass': 'services__text'
+                    },
+                    {
+                        'img': 'services_img.png',
+                        'imgClass': 'services__img',
+                        'title': 'Search Optimization',
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ' +
+                        'ipsum at lacus commodo suscipit.',
+                        'textClass': 'services__text'
+                    },
+                    {
+                        'img': 'services_img.png',
+                        'imgClass': 'services__img',
+                        'title': 'Online Shop',
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ' +
+                        'ipsum at lacus commodo suscipit.',
+                        'textClass': 'services__text'
+                    },
+                    {
+                        'img': 'services_img.png',
+                        'imgClass': 'services__img',
+                        'title': 'Social Media',
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ' +
+                        'ipsum at lacus commodo suscipit.',
+                        'textClass': 'services__text'
+                    }
+                ])
