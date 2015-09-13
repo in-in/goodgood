@@ -244,38 +244,6 @@ body {
   clear: both;
 }
 
-.feature {
-  width: 20%;
-  float: left;
-  margin-right: 6.6666666667%;
-}
-
-.feature:last-child {
-  width: 20%;
-  float: right;
-  margin-right: 0;
-}
-
-@media (max-width: 40em) {
-  .feature {
-    width: 46.6666666667%;
-    float: left;
-    margin-right: 6.6666666667%;
-    margin-bottom: 6.6666666667%;
-  }
-  .feature:nth-child(2n) {
-    width: 46.6666666667%;
-    float: right;
-    margin-right: 0;
-  }
-  .feature:nth-child(odd) {
-    clear: both;
-  }
-  .feature:nth-last-child(-n+2) {
-    margin-bottom: 0;
-  }
-}
-
 .header {
   width: 100%;
   height: 5rem;
@@ -1153,17 +1121,17 @@ input::-webkit-search-cancel-button {
   text-align: left;
 }
 
-.features {
+.offer {
   padding-bottom: 1.875rem;
 }
 
-.features--header {
-  padding-top: 2rem;
-  margin-bottom: 2.5rem;
+.offer__header {
+  padding-top: 3.404255319%;
+  padding-bottom: 1.489361702%;
   text-align: center;
 }
 
-.features--subtitle {
+.offer__subtitle {
   padding: 0 12.5%;
   padding-top: 1.4375rem;
   font-family: "Ubuntu", san-serif;
@@ -1171,43 +1139,16 @@ input::-webkit-search-cancel-button {
   font-style: normal;
   font-size: 0.75rem;
   color: #515862;
+  line-height: 1.2;
 }
 
-.features-list {
-  max-width: 60em;
-  margin-left: auto;
-  margin-right: auto;
+.offer__list {
+  text-align: center;
 }
 
-.features-list:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.feature--title {
-  margin-bottom: 0.625rem;
-  font-family: "Bree Serif", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.0625rem;
-  color: #2b99cc;
-}
-
-.feature--text {
-  font-family: "Ubuntu", san-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.6875rem;
-  color: #515862;
-  line-height: 0.9375rem;
-}
-
-.feature--details a {
-  color: #2b99cc;
-  font-family: "Ubuntu", san-serif;
-  font-weight: 700;
-  font-style: normal;
+.offer__text {
+  padding: 0 4.87804878%;
+  text-align: left;
 }
 
 .testimonials {
@@ -1824,6 +1765,7 @@ input::-webkit-search-cancel-button {
   width: 25%;
   margin-right: -4px;
   padding: 2.127659574% 1.595744681%;
+  vertical-align: top;
 }
 
 .features-item__img {
@@ -1839,6 +1781,10 @@ input::-webkit-search-cancel-button {
   font-size: 1.0625rem;
   color: #515862;
   text-align: center;
+}
+
+.features-item__title--blue {
+  color: #2190c1;
 }
 
 .features-item__text {

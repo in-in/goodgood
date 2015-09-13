@@ -1,0 +1,27 @@
+.offer {
+  padding-bottom: rem(30);
+}
+
+.offer__header {
+  padding-top: 3.404255319%; //32
+  padding-bottom: 1.489361702%; //14
+  text-align: center;
+}
+
+.offer__subtitle {
+  padding: 0 12.5%;
+  padding-top: rem(23);
+  @include font(ubuntu);
+  font-size: rem(12);
+  color: $main-text-color;
+  line-height: 1.2;
+}
+
+.offer__list {
+  text-align: center;
+}
+
+.offer__text {
+  padding: 0 4.87804878%; //10
+  text-align: left;
+}

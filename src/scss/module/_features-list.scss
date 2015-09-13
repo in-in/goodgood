@@ -4,6 +4,7 @@
   width: 25%;
   margin-right: -4px;
   padding: 2.127659574% 1.595744681%; //20 15
+  vertical-align: top;
 }
 
 .features-item__img {
@@ -17,6 +18,10 @@
   font-size: rem(17);
   color: $main-text-color;
   text-align: center;
+}
+
+.features-item__title--blue {
+  color: $main-blue;
 }
 
 .features-item__text {

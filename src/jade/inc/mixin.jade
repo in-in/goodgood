@@ -42,6 +42,7 @@ mixin favicon(path)
     meta(name="theme-color", content="#ffffff")
 
 
+// features-list
 mixin features(items)
     each item in items
         .features-item
@@ -54,8 +55,11 @@ mixin features(items)
                     .features-item__img(style='background-image: url(/img/#{item.img})')
 
             if item.title
-                h4.features-item__title
-                    = item.title
+                if item.titleBlue
+                    h4.features-item__title(class='features-item__title--blue')
+                        = item.title
+                else
+                    h4.features-item__title= item.title
 
             if item.text
                 if item.textClass
