@@ -2,7 +2,7 @@
   display: inline-block;
   min-width: rem(200);
   width: 25%;
-  margin-right: -4px;
+  margin-right: -5px;
   padding: 2.127659574% 1.595744681%; //20 15
   vertical-align: top;
 }
@@ -10,6 +10,15 @@
 .features-item__img {
   margin: 0 auto;
   margin-bottom: 9.756097561%; //20
+}
+
+.features-item__icon {
+  margin: 0 auto;
+  margin-bottom: 9.756097561%; //20
+
+  svg {
+    max-width: 100%;
+  }
 }
 
 .features-item__title {
