@@ -1,1 +1,54 @@
-h1 team
+mixin member(items)
+    each item in items
+        .member
+            .member__pic
+                svg
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-#{item.svg}")
+            .member__title
+                .member__office= item.office
+                .member__name= item.name
+                .member__email
+                    a(href="mailto:jondoelorem@dil.com")= item.email
+                .member__social
+                    .social-icon.social-icon--twitter
+                    .social-icon.social-icon--linkedin
+                    .social-icon.social-icon--facebook
+                    .social-icon.social-icon--ok
+            .member__text= item.text
+
+section.team
+    .container
+        .team__wrap
+            header.team__header
+                h1.section-title.section-title--l Our Team
+            .team-list
+                +member([
+                    {
+                        'svg': 'man',
+                        'office': 'Art Director',
+                        'name': 'Jon Doe Lorem',
+                        'email': 'jondoelorem@dil.com',
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adip iscing elitont. Ut ultricies sagittis magna acommo doinger. Ut eget erosoni mauris utcurami susurnand. Vestibulum ante ipsu  primi sini  desiturkarti edolar sitamet deakorna seni cool derrsim de peace biraz doldin Nulla facilisi. Aliquam elit nisienatis achen oldu bonibkno tranto.'
+                    },
+                    {
+                        'svg': 'woman',
+                        'office': 'Art Director',
+                        'name': 'Jon Doe Lorem',
+                        'email': 'jondoelorem@dil.com',
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adip iscing elitont. Ut ultricies sagittis magna acommo doinger. Ut eget erosoni mauris utcurami susurnand. Vestibulum ante ipsu  primi sini  desiturkarti edolar sitamet deakorna seni cool derrsim de peace biraz doldin Nulla facilisi. Aliquam elit nisienatis achen oldu bonibkno tranto.'
+                    },
+                    {
+                        'svg': 'man',
+                        'office': 'Art Director',
+                        'name': 'Jon Doe Lorem',
+                        'email': 'jondoelorem@dil.com',
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adip iscing elitont. Ut ultricies sagittis magna acommo doinger. Ut eget erosoni mauris utcurami susurnand. Vestibulum ante ipsu  primi sini  desiturkarti edolar sitamet deakorna seni cool derrsim de peace biraz doldin Nulla facilisi. Aliquam elit nisienatis achen oldu bonibkno tranto.'
+                    },
+                    {
+                        'svg': 'woman',
+                        'office': 'Art Director',
+                        'name': 'Jon Doe Lorem',
+                        'email': 'jondoelorem@dil.com',
+                        'text': 'Lorem ipsum dolor sit amet, consectetur adip iscing elitont. Ut ultricies sagittis magna acommo doinger. Ut eget erosoni mauris utcurami susurnand. Vestibulum ante ipsu  primi sini  desiturkarti edolar sitamet deakorna seni cool derrsim de peace biraz doldin Nulla facilisi. Aliquam elit nisienatis achen oldu bonibkno tranto.'
+                    }
+                ])

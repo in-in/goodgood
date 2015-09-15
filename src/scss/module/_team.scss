@@ -1,0 +1,120 @@
+.team__wrap {
+  padding-top: 5.106382979%; //48
+}
+
+.team__header {
+  margin-bottom: 5%; //47
+}
+
+.team-list {
+  text-align: center;
+}
+
+.member {
+  display: inline-block;
+  //width: 380px;
+  width: 40.425531915%; //380
+  height: 289px;
+  padding-top: 13px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 28px;
+  margin-right: 7.446808511%; //70
+  margin-bottom: 55px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  text-align: left;
+
+  &:nth-child(odd) {
+    box-shadow:  rem(-10) rem(-10) 0 #d3d3d3;
+  }
+
+  &:nth-child(even) {
+    box-shadow:  rem(10) rem(-10) 0 #d3d3d3;
+    margin-right: 0;
+  }
+}
+
+.member__pic {
+  display: inline-block;
+  width: 129px;
+  height: 129px;
+  margin-right: 26px;
+  margin-bottom: 25px;
+  padding-top: 10px;
+  background-color: #b5b5b5;
+  
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+    fill: #6b6b6b;
+  }
+}
+
+.member__title {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.member__office {
+  margin-bottom: 10px;
+  @include font(breeserif);
+  color: $member-office;
+  font-size: rem(17);
+}
+
+.member__name {
+  margin-bottom: 5px;
+  @include font(oswald, bold);
+  color: $main-blue;
+  font-size: rem(25);
+  text-transform: uppercase;
+}
+
+.member__email a {
+  @include font(ubuntu);
+  color: #94979b;
+  font-size: rem(13);
+}
+
+.member__social {
+  padding-top: 10px;
+}
+
+.member__social .social-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  border-radius: 3px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-icon--twitter {
+  background-color: #00a1e4;
+}
+
+.social-icon--linkedin {
+  background-color: #29aecb;
+}
+
+.social-icon--facebook {
+  background-color: #0481d9;
+}
+
+.social-icon--ok {
+  background-color: #f7941d;
+}
+
+.member__text {
+  @include font(ubuntu);
+  color: $main-text-color;
+  font-size: rem(12);
+  line-height: 1.6;
+  text-align: left;
+}
