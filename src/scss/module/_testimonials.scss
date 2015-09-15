@@ -65,6 +65,8 @@
     color: $person-bg;
     image: svg("woman.min", '[fill]: #6b6b6b');
     repeat: no-repeat;
+    position: center .4rem;
+    size: contain;
   }
 
   &::after {
