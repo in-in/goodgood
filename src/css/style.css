@@ -1866,6 +1866,7 @@ input::-webkit-search-cancel-button {
 
 .team__wrap {
   padding-top: 5.106382979%;
+  padding-bottom: 5.319148936%;
 }
 
 .team__header {
@@ -1879,13 +1880,13 @@ input::-webkit-search-cancel-button {
 .member {
   display: inline-block;
   width: 40.425531915%;
-  height: 289px;
-  padding-top: 13px;
-  padding-left: 13px;
-  padding-right: 13px;
-  padding-bottom: 28px;
+  min-width: 20rem;
+  padding-top: 1.382978723%;
+  padding-left: 1.382978723%;
+  padding-right: 1.382978723%;
+  padding-bottom: 2.765957447%;
   margin-right: 7.446808511%;
-  margin-bottom: 55px;
+  margin-bottom: 5.85106383%;
   border: 1px solid #ccc;
   background-color: #ffffff;
   text-align: left;
@@ -1900,14 +1901,30 @@ input::-webkit-search-cancel-button {
   margin-right: 0;
 }
 
+@media (max-width: 50em) {
+  .member:nth-child(even) {
+    box-shadow: -0.625rem -0.625rem 0 #d3d3d3;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 50em) {
+  .member {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .member__pic {
   display: inline-block;
-  width: 129px;
-  height: 129px;
-  margin-right: 26px;
-  margin-bottom: 25px;
-  padding-top: 10px;
+  width: 36.647727273%;
+  max-height: 8.0625rem;
+  margin-right: 7.386363636%;
+  margin-bottom: 6.534090909%;
+  padding-top: 2.840909091%;
   background-color: #b5b5b5;
+  overflow: hidden;
 }
 
 .member__pic svg {
@@ -1924,7 +1941,7 @@ input::-webkit-search-cancel-button {
 }
 
 .member__office {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-family: "Bree Serif", serif;
   font-weight: 400;
   font-style: normal;
@@ -1933,7 +1950,7 @@ input::-webkit-search-cancel-button {
 }
 
 .member__name {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   font-family: "Oswald", san-serif;
   font-weight: 700;
   font-style: normal;
@@ -1951,14 +1968,14 @@ input::-webkit-search-cancel-button {
 }
 
 .member__social {
-  padding-top: 10px;
+  padding-top: 0.875rem;
 }
 
 .member__social .social-icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-right: 6px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.375rem;
   border-radius: 3px;
 }
 

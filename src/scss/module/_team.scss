@@ -1,5 +1,6 @@
 .team__wrap {
   padding-top: 5.106382979%; //48
+  padding-bottom: 5.319148936%; //50
 }
 
 .team__header {
@@ -12,15 +13,14 @@
 
 .member {
   display: inline-block;
-  //width: 380px;
   width: 40.425531915%; //380
-  height: 289px;
-  padding-top: 13px;
-  padding-left: 13px;
-  padding-right: 13px;
-  padding-bottom: 28px;
+  min-width: rem(320);
+  padding-top: 1.382978723%; //13
+  padding-left: 1.382978723%; //13
+  padding-right: 1.382978723%; //13
+  padding-bottom: 2.765957447%; //26
   margin-right: 7.446808511%; //70
-  margin-bottom: 55px;
+  margin-bottom: 5.85106383%; //55
   border: 1px solid #ccc;
   background-color: #ffffff;
   text-align: left;
@@ -32,17 +32,29 @@
   &:nth-child(even) {
     box-shadow:  rem(10) rem(-10) 0 #d3d3d3;
     margin-right: 0;
+
+    @include breakpoint($medium) {
+      box-shadow:  rem(-10) rem(-10) 0 #d3d3d3;
+      margin-right: auto;
+    }
+  }
+  
+  @include breakpoint($medium) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .member__pic {
   display: inline-block;
-  width: 129px;
-  height: 129px;
-  margin-right: 26px;
-  margin-bottom: 25px;
-  padding-top: 10px;
+  width: 36.647727273%; //129
+  max-height: rem(129);
+  margin-right: 7.386363636%; //26;
+  margin-bottom: 6.534090909%; //23
+  padding-top: 2.840909091%; //10
   background-color: #b5b5b5;
+  overflow: hidden;
   
   svg {
     max-width: 100%;
@@ -59,14 +71,14 @@
 }
 
 .member__office {
-  margin-bottom: 10px;
+  margin-bottom: rem(10);
   @include font(breeserif);
   color: $member-office;
   font-size: rem(17);
 }
 
 .member__name {
-  margin-bottom: 5px;
+  margin-bottom: rem(5);
   @include font(oswald, bold);
   color: $main-blue;
   font-size: rem(25);
@@ -80,14 +92,14 @@
 }
 
 .member__social {
-  padding-top: 10px;
+  padding-top: rem(14);
 }
 
 .member__social .social-icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-right: 6px;
+  width: rem(24);
+  height: rem(24);
+  margin-right: rem(6);
   border-radius: 3px;
   
   &:last-child {
