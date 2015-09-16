@@ -7,21 +7,10 @@
   width: 96.595744681%;
   margin: 0 auto;
   padding-top: 2.202643172%; //20px
-}
-
-.mission-text {
-  @include font(ubuntu);
-  font-size: rem(13);
-  text-align: center;
-  line-height: 1.5;
   
-  &:first-child {
+  .section-text:first-child {
     padding-bottom: 2.202643172%; //20px
   }
-}
-
-.mission-text--b {
-  @include font(ubuntu, bold);
 }
 
 .mission-tagline {

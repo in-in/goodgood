@@ -27,8 +27,17 @@
   @include breakpoint($small) {
     font-size: calc(1.8125rem - 20%);
   }
-
 }
 
+.section-text {
+  @include font(ubuntu);
+  font-size: rem(13);
+  color: $main-text-color;
+  text-align: center;
+  line-height: 1.5;
+}
 
+.section-text--b {
+  @include font(ubuntu, bold);
+}
 

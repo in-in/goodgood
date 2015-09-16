@@ -83,3 +83,37 @@ $footer_susy: (
     }
   }
 }
+
+.contacts-row {
+  background-color: hotpink;
+
+  &::after {
+    @include cf;
+  }
+}
+
+.contacts-col {
+  @include span(6 of 12);
+  padding: 0 5.85106383%; //55
+
+  @include breakpoint($medium) {
+    width: 100%;
+    float: none;
+  }
+}
+
+.contacts-col--left {
+  background-color: greenyellow;
+
+  @include breakpoint($medium) {
+    padding-bottom: 5.85106383%; //55
+  }
+}
+
+.contacts-col--right {
+  background-color: darkseagreen;
+
+  @include breakpoint($medium) {
+    padding-top: 5.85106383%; //55
+  }
+}
