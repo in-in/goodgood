@@ -2091,6 +2091,28 @@ input::-webkit-search-cancel-button {
   padding-bottom: 7.234042553%;
 }
 
+.feedback-form label,
+.feedback-form input {
+  display: block;
+  width: 100%;
+}
+
+.feedback-form__label {
+  width: 100%;
+  color: blue;
+}
+
+.feedback-form__label::after {
+  content: '*';
+  color: red;
+}
+
+.feedback-form__textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+}
+
 footer {
   background-color: #2e3e4f;
 }

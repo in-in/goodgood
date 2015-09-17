@@ -74,11 +74,25 @@
         <div class="contacts__wrap">
           <div class="contacts-row vertline">
             <div class="contacts-col contacts-col--left">
-              <div class="feedback-form">
-                <form>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </form>
-              </div>
+              <form class="feedback-form">
+                <div class="field-wrap">
+                  <label for="name" class="feedback-form__label">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="field-wrap">
+                  <label for="email" class="feedback-form__label">E-mail address</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="field-wrap">
+                  <label for="subject" class="feedback-form__label">Subject</label>
+                  <input type="email" id="subject" name="subject" required>
+                </div>
+                <div class="field-wrap">
+                  <label for="message" class="feedback-form__label">Message</label>
+                  <textarea id="message" required class="feedback-form__textarea"></textarea>
+                </div>
+                <input name="submit" value="Send" type="submit">
+              </form>
             </div>
             <div class="contacts-col contacts-col--right">
               <div class="address">

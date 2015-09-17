@@ -1,0 +1,23 @@
+.feedback-form {
+  label,
+  input {
+    display: block;
+    width: 100%;
+  }
+}
+
+.feedback-form__label {
+  width: 100%;
+  color: blue;
+  
+  &::after {
+    content: '*';
+    color: red;
+  }
+}
+
+.feedback-form__textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+}
