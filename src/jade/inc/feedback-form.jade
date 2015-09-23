@@ -1,14 +1,20 @@
-form.feedback-form
+form(action='//formspree.io/setformz@gmail.com', method="POST").feedback-form
     .field-wrap
         label(for='name').feedback-form__label Name
-        input(type='text', id='name', name='name', required)
+        input(type='text', id='name', required)
     .field-wrap
         label(for='email').feedback-form__label E-mail address
-        input(type='email', id='email', name='email', required)
+        input(type='email', id='email', name='_replyto', required)
     .field-wrap
         label(for='subject').feedback-form__label Subject
-        input(type='email', id='subject', name='subject', required)
+        input(type='text', id='subject', name='_subject' required)
     .field-wrap
         label(for='message').feedback-form__label Message
-        textarea(id='message', required).feedback-form__textarea
-    input(name='submit', value='Send', type='submit')
+        textarea(id='message', name='message', required).feedback-form__textarea
+    input(type="hidden", name="_next", value="")
+    button(type="submit", class='form-btn') Send
+
+    script.
+        var localHref = window.location.href;
+        var inputHidden = document.querySelector('input[name="_next"]');
+        inputHidden.setAttribute('value', localHref)

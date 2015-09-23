@@ -74,24 +74,30 @@
         <div class="contacts__wrap">
           <div class="contacts-row vertline">
             <div class="contacts-col contacts-col--left">
-              <form class="feedback-form">
+              <form action="//formspree.io/setformz@gmail.com" method="POST" class="feedback-form">
                 <div class="field-wrap">
                   <label for="name" class="feedback-form__label">Name</label>
-                  <input type="text" id="name" name="name" required>
+                  <input type="text" id="name" required>
                 </div>
                 <div class="field-wrap">
                   <label for="email" class="feedback-form__label">E-mail address</label>
-                  <input type="email" id="email" name="email" required>
+                  <input type="email" id="email" name="_replyto" required>
                 </div>
                 <div class="field-wrap">
                   <label for="subject" class="feedback-form__label">Subject</label>
-                  <input type="email" id="subject" name="subject" required>
+                  <input type="text" id="subject" name="_subject" required>
                 </div>
                 <div class="field-wrap">
                   <label for="message" class="feedback-form__label">Message</label>
-                  <textarea id="message" required class="feedback-form__textarea"></textarea>
+                  <textarea id="message" name="message" required class="feedback-form__textarea"></textarea>
                 </div>
-                <input name="submit" value="Send" type="submit">
+                <input type="hidden" name="_next" value="">
+                <button type="submit" class="form-btn">Send</button>
+                <script>
+                  var localHref = window.location.href;
+                  var inputHidden = document.querySelector('input[name="_next"]');
+                  inputHidden.setAttribute('value', localHref)
+                </script>
               </form>
             </div>
             <div class="contacts-col contacts-col--right">
