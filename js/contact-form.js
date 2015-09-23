@@ -1,0 +1,1 @@
+function hide(){"use strict";var a="c2V0Zm9ybXpAZ21haWwuY29t",b="//formspree.io/",c=b+atob(a);document.querySelector(".feedback-form").setAttribute("action",c)}var localHref=window.location.href,inputHidden=document.querySelector('input[name="_next"]');inputHidden.setAttribute("value",localHref),hide();
