@@ -74,7 +74,7 @@
         <div class="contacts__wrap">
           <div class="contacts-row vertline">
             <div class="contacts-col contacts-col--left">
-              <form action="//formspree.io/setformz@gmail.com" method="POST" class="feedback-form">
+              <form method="POST" class="feedback-form">
                 <div class="field-wrap">
                   <label for="name" class="feedback-form__label">Name</label>
                   <input type="text" id="name" required>
@@ -93,11 +93,7 @@
                 </div>
                 <input type="hidden" name="_next" value="">
                 <button type="submit" class="form-btn">Send</button>
-                <script>
-                  var localHref = window.location.href;
-                  var inputHidden = document.querySelector('input[name="_next"]');
-                  inputHidden.setAttribute('value', localHref)
-                </script>
+                <div id="demo"></div>
               </form>
             </div>
             <div class="contacts-col contacts-col--right">
@@ -171,6 +167,7 @@
       </div>
     </footer>
     <!--script-->
+    <script src="js/contact-form.js"></script>
     <script src="js/analytics.js"></script>
   </body>
 </html>
