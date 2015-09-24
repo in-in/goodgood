@@ -1,16 +1,21 @@
 form(method="POST").feedback-form
+    p.form-attention
+        | Lorem ipsum dolor sit amet, consectetur
+        span.required-asterisk
+        |  sign amentu kurmanci.
+
     .field-wrap
-        label(for='name').feedback-form__label Name
-        input(type='text', id='name', required)
+        label(for='name').feedback-form__label.required-asterisk Name
+        input(type='text', id='name', maxlength='100', required).feedback-form__input
     .field-wrap
-        label(for='email').feedback-form__label E-mail address
-        input(type='email', id='email', name='_replyto', required)
+        label(for='email').feedback-form__label.required-asterisk E-mail address
+        input(type='email', id='email', name='_replyto', maxlength='100', required).feedback-form__input
     .field-wrap
-        label(for='subject').feedback-form__label Subject
-        input(type='text', id='subject', name='_subject' required)
+        label(for='subject').feedback-form__label.required-asterisk Subject
+        input(type='text', id='subject', name='_subject', maxlength='100', required).feedback-form__input
     .field-wrap
-        label(for='message').feedback-form__label Message
-        textarea(id='message', name='message', required).feedback-form__textarea
+        label(for='message').feedback-form__label.required-asterisk Message (maximum 500 characters)
+        textarea(id='message', name='message', maxlength='500', required).feedback-form__textarea.required-asterisk
     input(type="hidden", name="_next", value="")
-    button(type="submit", class='form-btn') Send
-    #demo
+    .feedback-form__btn
+        button(type="submit", class='form-btn') Send

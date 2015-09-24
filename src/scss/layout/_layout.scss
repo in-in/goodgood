@@ -85,7 +85,6 @@ $footer_susy: (
 }
 
 .contacts-row {
-  background-color: hotpink;
 
   &::after {
     @include cf;
@@ -103,7 +102,6 @@ $footer_susy: (
 }
 
 .contacts-col--left {
-  background-color: greenyellow;
 
   @include breakpoint($medium) {
     padding-bottom: 5.85106383%; //55

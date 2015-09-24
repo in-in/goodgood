@@ -75,25 +75,27 @@
           <div class="contacts-row vertline">
             <div class="contacts-col contacts-col--left">
               <form method="POST" class="feedback-form">
+                <p class="form-attention">Lorem ipsum dolor sit amet, consectetur<span class="required-asterisk"></span> sign amentu kurmanci.</p>
                 <div class="field-wrap">
-                  <label for="name" class="feedback-form__label">Name</label>
-                  <input type="text" id="name" required>
+                  <label for="name" class="feedback-form__label required-asterisk">Name</label>
+                  <input type="text" id="name" maxlength="100" required class="feedback-form__input">
                 </div>
                 <div class="field-wrap">
-                  <label for="email" class="feedback-form__label">E-mail address</label>
-                  <input type="email" id="email" name="_replyto" required>
+                  <label for="email" class="feedback-form__label required-asterisk">E-mail address</label>
+                  <input type="email" id="email" name="_replyto" maxlength="100" required class="feedback-form__input">
                 </div>
                 <div class="field-wrap">
-                  <label for="subject" class="feedback-form__label">Subject</label>
-                  <input type="text" id="subject" name="_subject" required>
+                  <label for="subject" class="feedback-form__label required-asterisk">Subject</label>
+                  <input type="text" id="subject" name="_subject" maxlength="100" required class="feedback-form__input">
                 </div>
                 <div class="field-wrap">
-                  <label for="message" class="feedback-form__label">Message</label>
-                  <textarea id="message" name="message" required class="feedback-form__textarea"></textarea>
+                  <label for="message" class="feedback-form__label required-asterisk">Message (maximum 500 characters)</label>
+                  <textarea id="message" name="message" maxlength="500" required class="feedback-form__textarea required-asterisk"></textarea>
                 </div>
                 <input type="hidden" name="_next" value="">
-                <button type="submit" class="form-btn">Send</button>
-                <div id="demo"></div>
+                <div class="feedback-form__btn">
+                  <button type="submit" class="form-btn">Send</button>
+                </div>
               </form>
             </div>
             <div class="contacts-col contacts-col--right">
