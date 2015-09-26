@@ -1,0 +1,1 @@
+function initialize(){var a=document.getElementById("map"),b={center:new google.maps.LatLng(40.771509,-73.973805),zoom:14,disableDefaultUI:!0,mapTypeId:google.maps.MapTypeId.ROADMAP};new google.maps.Map(a,b)}google.maps.event.addDomListener(window,"load",initialize);
