@@ -24,7 +24,7 @@ body {
     left: 50%;
     bottom: 0;
     width: 1px;
-    background-color: red;
+    background-color: $ruler;
 
     @include breakpoint($medium) {
       display: none;

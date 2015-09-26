@@ -94,16 +94,24 @@
                 </div>
                 <input type="hidden" name="_next" value="">
                 <div class="feedback-form__btn">
-                  <button type="submit" class="form-btn">Send</button>
+                  <button type="submit" id="form-btn" class="form-btn">Send</button>
                 </div>
               </form>
             </div>
             <div class="contacts-col contacts-col--right">
-              <div class="address">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <div class="addr">
+                <div class="addr__item tel">
+                  <p class="addr__line">Office: +1 (000) 123-4567</p>
+                  <p class="addr__line">Mobil: +1 (000) 123-4567</p>
+                </div>
+                <div class="addr__item location">
+                  <p class="addr__line">Lorem ipsum dolar sit amet</p>
+                  <p class="addr__line">New York - United States</p>
+                </div>
+                <div class="addr__item links"><a href="mailto:abcde.abcde@gmail.com" class="addr__line addr__line--link">abcde.abcde@gmail.com</a><a href="http://abcde-abcde.com/" class="addr__line addr__line--link">www.abcde-abcde.com</a></div>
               </div>
-              <div class="map">
-                <h1>map</h1>
+              <div class="map-wrap">
+                <div id="map"></div>
               </div>
               <div class="social-links">
                 <h1>social-links</h1>
@@ -170,6 +178,8 @@
     </footer>
     <!--script-->
     <script src="js/contact-form.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/map.js"></script>
     <script src="js/analytics.js"></script>
   </body>
 </html>

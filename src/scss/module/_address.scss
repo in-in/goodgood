@@ -1,0 +1,52 @@
+.addr {
+  &::after {
+    @include cf;
+  }
+}
+
+.addr__item {
+  padding-left: rem(45);
+  margin-bottom: rem(10);
+  background: {
+    repeat: no-repeat;
+    position: left center;
+    size: rem(25) rem(27);
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @include breakpoint($medium) {
+    @include span(4 of 12);
+    padding-left: 0;
+    padding-top: rem(40);
+    background-position: center top;
+    text-align: center;
+  }
+}
+
+.tel {
+  background-image: svg("phone.min", "[fill]: #2190c1");
+}
+
+.location {
+  background-image: svg("home.min", "[fill]: #2190c1");
+}
+
+.links {
+  background-image: svg("mail.min", "[fill]: #2190c1");
+}
+
+.addr__line {
+  display: block;
+  @include font(ubuntu);
+  font-size: rem(13);
+  color: $main-text-color;
+  line-height: 1.5;
+}
+
+.addr__line--link {
+  text-decoration: underline;
+  color: $main-blue;
+}

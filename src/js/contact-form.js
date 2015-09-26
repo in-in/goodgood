@@ -14,3 +14,12 @@ function hide() {
 }
 
 hide();
+
+
+//thanks message
+var form = document.getElementsByClassName('feedback-form')[0];
+form.addEventListener('submit', captureForm, false);
+
+function captureForm() {
+  alert('Thank you for your feedback.');
+}

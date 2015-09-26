@@ -105,11 +105,11 @@ $footer_susy: (
 
   @include breakpoint($medium) {
     padding-bottom: 5.85106383%; //55
+    border-bottom: 1px solid $ruler;;
   }
 }
 
 .contacts-col--right {
-  background-color: darkseagreen;
 
   @include breakpoint($medium) {
     padding-top: 5.85106383%; //55
