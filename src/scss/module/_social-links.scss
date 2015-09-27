@@ -1,0 +1,25 @@
+.social-links {
+  padding-top: rem(40);
+}
+
+.social-links__title {
+  @include font(oswald, bold);
+  font-size: rem(28);
+  color: $main-text-color;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.social-icon {
+  padding-top: rem(20);
+  text-align: center;
+}
+
+.social-icon__item {
+  @include span(1 of 6);
+}
+
+.social-icon__svg {
+  width: rem(45);
+  height: rem(45);
+}
