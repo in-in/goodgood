@@ -215,7 +215,7 @@ module.exports = function (grunt) {
       build: {
         options: {
           removeComments: true,
-          collapseWhitespace: true,
+          //collapseWhitespace: true,
           removeCommentsFromCDATA: true,
           removeEmptyAttributes: true,
           removeScriptTypeAttributes: true,
