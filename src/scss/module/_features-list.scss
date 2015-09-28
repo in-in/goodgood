@@ -2,9 +2,10 @@
   display: inline-block;
   min-width: rem(200);
   width: 25%;
-  margin-right: -5px;
+  margin-right: rem(-5);
   padding: 2.127659574% 1.595744681%; //20 15
   vertical-align: top;
+  font-size: 1rem;
 }
 
 .features-item__img {
