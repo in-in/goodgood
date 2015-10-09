@@ -30,7 +30,7 @@ module.exports = function (grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer-core')(
+          require('autoprefixer')(
             {browsers: 'last 2 versions'}
           ),
           require('postcss-svg')(
@@ -271,8 +271,6 @@ module.exports = function (grunt) {
     }
   });
 
-
-  //grunt.registerTask('comb', ['newer:csscomb']);
   
   grunt.registerTask('svg', [
     'clean:svg',
